@@ -1,3 +1,8 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
 package deviationScoreRegions.modular;
 
 import basics.Tools;
@@ -6,14 +11,12 @@ import deviationScoreRegions.ScoreDbscan;
 import deviationScoreRegions.dbscan.DbscanTools;
 import deviationScoreRegions.modular.scoreImage.ScoreImage;
 import ij.process.ColorProcessor;
-import ij.process.ImageProcessor;
 import java.awt.Point;
-import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public class ScoreClustering extends ScoreDbscan
-{
+public class ScoreClustering extends ScoreDbscan {
     private final double scoreClusteringThreshold = 255.0D;
     private final double tetha_epsilon = 0.025D;
     private final int tetha_score = 30;
@@ -22,8 +25,7 @@ public class ScoreClustering extends ScoreDbscan
     private List<Point> coreScorePoints;
     private double density;
 
-    public List<Point> getScorePoints()
-    {
+    public List<Point> getScorePoints() {
         return this.scorePoints;
     }
 
@@ -47,36 +49,36 @@ public class ScoreClustering extends ScoreDbscan
         return this.minPts;
     }
 
-    private double calcScorePointDensity(ScoreImage scoreImage)
-    {
+    private double calcScorePointDensity(ScoreImage scoreImage) {
         double sum = 0.0D;
-        for (Point p : this.scorePoints) {
-            sum += Math.min(scoreImage.getImageProcessor().getPixelValue(p.x, p.y) / 255.0D, 1.0D);
+
+        Point p;
+        for(Iterator i$ = this.scorePoints.iterator(); i$.hasNext(); sum += Math.min((double)scoreImage.getImageProcessor().getPixelValue(p.x, p.y) / 255.0D, 1.0D)) {
+            p = (Point)i$.next();
         }
-        return sum / scoreImage.getImageProcessor().getPixelCount();
+
+        return sum / (double)scoreImage.getImageProcessor().getPixelCount();
     }
 
-    protected boolean isCore(Point p)
-    {
+    protected boolean isCore(Point p) {
         boolean isCore = super.isCore(p);
         if (isCore) {
             this.coreScorePoints.add(p);
         }
+
         return isCore;
     }
 
-    public ScoreClustering(ScoreImage scoreImage)
-    {
-        setScoreImage(scoreImage.getImageProcessor());
-        setScoreThreshold(255.0D);
-
+    public ScoreClustering(ScoreImage scoreImage) {
+        this.setScoreImage(scoreImage.getImageProcessor());
+        this.setScoreThreshold(255.0D);
         this.scoreImage = scoreImage;
         this.scorePoints = Tools.imageProcessorToPoints(scoreImage.getImageProcessor(), 30);
-        this.density = calcScorePointDensity(scoreImage);
-        this.minPts = ((int)Math.round(Math.pow(1.025D, 2.0D) * this.density) + 1);
-        this.epsilon = (int)Math.round(0.025D * Math.sqrt(scoreImage.getImageProcessor().getPixelCount()));
+        this.density = this.calcScorePointDensity(scoreImage);
+        this.minPts = (int)Math.round(Math.pow(1.025D, 2.0D) * this.density) + 1;
+        this.epsilon = (int)Math.round(0.025D * Math.sqrt((double)scoreImage.getImageProcessor().getPixelCount()));
         this.coreScorePoints = new ArrayList();
-        this.clusters = get(this.scorePoints, this.epsilon, this.minPts);
+        this.clusters = this.get(this.scorePoints, this.epsilon, this.minPts);
         if (DEBUG.getVerbose()) {
             System.out.println("epsilon = 0.025 scorePointDensity = " + this.density + " minPts = " + this.minPts);
             String str = "";

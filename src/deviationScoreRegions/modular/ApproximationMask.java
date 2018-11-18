@@ -1,3 +1,8 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
 package deviationScoreRegions.modular;
 
 import basics.ProgressListener;
@@ -5,26 +10,24 @@ import basics.SystemOutProgressListener;
 import basics.Tools;
 import basics.convexHull.ConvexHullTools;
 import basics.javaAddons.DEBUG;
-import deviationScoreRegions.modular.scoreImage.ScoreImage;
 import ij.process.ByteProcessor;
 import ij.process.ImageProcessor;
 import java.awt.Color;
 import java.awt.Point;
+import java.util.Iterator;
 import java.util.List;
 import others.morphological.Morphological;
 
-public class ApproximationMask
-{
-    private final boolean convexHullLinking = true;
-    private final double mainClusterSize = 1.0D;
-    private final double tetha_c = 0.0D;
-    private final double tetha_rec = 0.25D;
+public class ApproximationMask {
+    private final boolean convexHullLinking;
+    private final double mainClusterSize;
+    private final double tetha_c;
+    private final double tetha_rec;
     private final ProgressListener progressListener;
     private ScoreClustering scoreClustering;
     private ImageProcessor imageProcessor;
 
-    public ImageProcessor getImageProcessor()
-    {
+    public ImageProcessor getImageProcessor() {
         return this.imageProcessor;
     }
 
@@ -45,48 +48,51 @@ public class ApproximationMask
     }
 
     public ApproximationMask(ScoreClustering scoreClustering, ProgressListener progressListener) {
+        this.convexHullLinking = true;
+        this.mainClusterSize = 1.0D;
+        this.tetha_c = 0.0D;
+        this.tetha_rec = 0.25D;
         this.scoreClustering = scoreClustering;
         this.progressListener = progressListener;
         int width = scoreClustering.getScoreImage().getImageProcessor().getWidth();
         int height = scoreClustering.getScoreImage().getImageProcessor().getHeight();
-        int breite = (int)Math.sqrt(width * height);
-
+        int breite = (int)Math.sqrt((double)(width * height));
         int epsilon = scoreClustering.getEpsilon();
         int minPts = scoreClustering.getMinPts();
-
         this.imageProcessor = new ByteProcessor(width, height);
         this.imageProcessor.setColor(Color.white);
+        List<List<Point>> clusters = scoreClustering.getClusters();
+        Iterator i$ = clusters.iterator();
 
-        List clusters = scoreClustering.getClusters();
-        for (List cluster : clusters)
-        {
-            if (cluster.size() / ((List)clusters.get(0)).size() < 1.0D)
-            {
+        while(i$.hasNext()) {
+            List<Point> cluster = (List)i$.next();
+            if ((double)cluster.size() / (double)((List)clusters.get(0)).size() < 1.0D) {
                 break;
             }
-            for (Point p : cluster) {
-                List rangePoints = scoreClustering.range(p, epsilon);
-                if (rangePoints.size() >= minPts)
-                {
-                    this.imageProcessor.fillPolygon(ConvexHullTools.get(rangePoints));
 
+            while(i$.hasNext()) {
+                Point p = (Point)i$.next();
+                List<Point> rangePoints = scoreClustering.range(p, epsilon);
+                if (rangePoints.size() >= minPts) {
+                    this.imageProcessor.fillPolygon(ConvexHullTools.get(rangePoints));
                     if (Tools.chance(0.001D)) {
                         progressListener.updateImage(this.imageProcessor);
                     }
                 }
             }
         }
-        if (DEBUG.getVerbose());
+
+        if (DEBUG.getVerbose()) {
+            ;
+        }
+
         progressListener.updateImage(this.imageProcessor);
-
         this.imageProcessor.erode();
-
-        this.imageProcessor = Morphological.close(this.imageProcessor, (int)(0.0D * breite));
-        this.imageProcessor = Morphological.dilateByReconstruction(this.imageProcessor, (int)(0.25D * breite));
+        this.imageProcessor = Morphological.close(this.imageProcessor, (int)(0.0D * (double)breite));
+        this.imageProcessor = Morphological.dilateByReconstruction(this.imageProcessor, (int)(0.25D * (double)breite));
     }
 
-    public int getMaskPixelCount()
-    {
+    public int getMaskPixelCount() {
         return this.imageProcessor.getPixelCount() - Tools.getPixelCount(this.imageProcessor, 0);
     }
 }

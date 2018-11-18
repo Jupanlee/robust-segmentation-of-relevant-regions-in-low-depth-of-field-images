@@ -1,3 +1,8 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
 package deviationScoreRegions;
 
 import basics.MImage;
@@ -17,81 +22,115 @@ import ij.process.ImageProcessor;
 import java.awt.Color;
 import java.awt.Point;
 import java.io.IOException;
-import java.io.PrintStream;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import others.morphological.Morphological;
 
-public class DeviationScoreRegions_2_differentSizes
-        implements Batch.Batchable
-{
+public class DeviationScoreRegions_2_differentSizes implements Batchable {
     double preBlur = 1.25D;
     int preBlurIterations = 3;
-    double blur = this.preBlur;
-    int scoreImageThreshold = 33;
-    double scoreClusteringThreshold = 127.5D;
+    double blur;
+    int scoreImageThreshold;
+    double scoreClusteringThreshold;
     static double labDifferencePower = 2.25D;
-    double finalPower = 4.0D;
-
-    double epsilonPercentage = 0.025D;
-    double minPtsScorePointDensityMultiplier = 1.0D;
-    double mainClusterSize = 0.5D;
-
-    double convexHullLinkingEpsilonPercentage = this.epsilonPercentage;
-
-    int maskApproximationSize = 350;
-    int nrOfErodes = 0;
-    int approxMapCloseSize = (int)(this.maskApproximationSize * 0.01D);
-    int approxMapReconstructSize = (int)(this.maskApproximationSize * 0.25D);
-    int addedBorderSize = 0;
-
-    double maxScoreRegionSize = 0.33D;
-    double deltaEToBeSimilar = 25.0D;
-    double approxMapReconstructSizePercentage = 0.33D;
-    double minMBO = 0.85D;
-    double relevancyIterationDec = 0.33D;
-    double minMaskRelevancy = 0.75D;
-    boolean convexHullLinking = false;
-
-    boolean saveMaskRelevancyPix = false;
+    double finalPower;
+    double epsilonPercentage;
+    double minPtsScorePointDensityMultiplier;
+    double mainClusterSize;
+    double convexHullLinkingEpsilonPercentage;
+    int maskApproximationSize;
+    int nrOfErodes;
+    int approxMapCloseSize;
+    int approxMapReconstructSize;
+    int addedBorderSize;
+    double maxScoreRegionSize;
+    double deltaEToBeSimilar;
+    double approxMapReconstructSizePercentage;
+    double minMBO;
+    double relevancyIterationDec;
+    double minMaskRelevancy;
+    boolean convexHullLinking;
+    boolean saveMaskRelevancyPix;
     ImageProcessor mask;
-    DebugInfoShower debugInfoShower = null;
-    private ProgressListener progressListener = null;
+    DebugInfoShower debugInfoShower;
+    private ProgressListener progressListener;
 
     public void setProgressListener(ProgressListener progressListener) {
         this.progressListener = progressListener;
     }
 
     public DeviationScoreRegions_2_differentSizes() {
+        this.blur = this.preBlur;
+        this.scoreImageThreshold = 33;
+        this.scoreClusteringThreshold = 127.5D;
+        this.finalPower = 4.0D;
+        this.epsilonPercentage = 0.025D;
+        this.minPtsScorePointDensityMultiplier = 1.0D;
+        this.mainClusterSize = 0.5D;
+        this.convexHullLinkingEpsilonPercentage = this.epsilonPercentage;
+        this.maskApproximationSize = 350;
+        this.nrOfErodes = 0;
+        this.approxMapCloseSize = (int)((double)this.maskApproximationSize * 0.01D);
+        this.approxMapReconstructSize = (int)((double)this.maskApproximationSize * 0.25D);
+        this.addedBorderSize = 0;
+        this.maxScoreRegionSize = 0.33D;
+        this.deltaEToBeSimilar = 25.0D;
+        this.approxMapReconstructSizePercentage = 0.33D;
+        this.minMBO = 0.85D;
+        this.relevancyIterationDec = 0.33D;
+        this.minMaskRelevancy = 0.75D;
+        this.convexHullLinking = false;
+        this.saveMaskRelevancyPix = false;
+        this.debugInfoShower = null;
+        this.progressListener = null;
     }
 
     public DeviationScoreRegions_2_differentSizes(ProgressListener progressListener) {
-        setProgressListener(progressListener);
+        this.blur = this.preBlur;
+        this.scoreImageThreshold = 33;
+        this.scoreClusteringThreshold = 127.5D;
+        this.finalPower = 4.0D;
+        this.epsilonPercentage = 0.025D;
+        this.minPtsScorePointDensityMultiplier = 1.0D;
+        this.mainClusterSize = 0.5D;
+        this.convexHullLinkingEpsilonPercentage = this.epsilonPercentage;
+        this.maskApproximationSize = 350;
+        this.nrOfErodes = 0;
+        this.approxMapCloseSize = (int)((double)this.maskApproximationSize * 0.01D);
+        this.approxMapReconstructSize = (int)((double)this.maskApproximationSize * 0.25D);
+        this.addedBorderSize = 0;
+        this.maxScoreRegionSize = 0.33D;
+        this.deltaEToBeSimilar = 25.0D;
+        this.approxMapReconstructSizePercentage = 0.33D;
+        this.minMBO = 0.85D;
+        this.relevancyIterationDec = 0.33D;
+        this.minMaskRelevancy = 0.75D;
+        this.convexHullLinking = false;
+        this.saveMaskRelevancyPix = false;
+        this.debugInfoShower = null;
+        this.progressListener = null;
+        this.setProgressListener(progressListener);
     }
 
-    public static void main(String[] args)
-            throws IOException
-    {
+    public static void main(String[] args) throws IOException {
         int size = 0;
-
         Batch.run(new DeviationScoreRegions_2_differentSizes(), size, "../../../data/batch/images/similarity");
     }
 
-    public static ImageProcessor getEdges(ImageProcessor ip)
-    {
+    public static ImageProcessor getEdges(ImageProcessor ip) {
         ImageProcessor edges = new ByteProcessor(ip.getWidth(), ip.getHeight());
         MImage mImage = new MImage(ip);
 
-        for (int x = 0; x < ip.getWidth(); x++) {
-            for (int y = 0; y < ip.getHeight(); y++) {
+        for(int x = 0; x < ip.getWidth(); ++x) {
+            for(int y = 0; y < ip.getHeight(); ++y) {
                 double deltaE = Tools.euklidDistance(mImage.getLab(x, y), mImage.getNeigbourMeanLab(x, y, 1));
-
                 int value = (int)Math.pow(deltaE, labDifferencePower);
                 edges.putPixel(x, y, value);
             }
         }
+
         return edges;
     }
 
@@ -99,8 +138,8 @@ public class DeviationScoreRegions_2_differentSizes
         if (DEBUG.getVerbose()) {
             Tools.save(original);
         }
-        ImageProcessor resized = Tools.resize(original, this.maskApproximationSize);
 
+        ImageProcessor resized = Tools.resize(original, this.maskApproximationSize);
         if (this.progressListener != null) {
             this.progressListener.progressUpdate(0.0D, "Scoring");
         }
@@ -108,7 +147,6 @@ public class DeviationScoreRegions_2_differentSizes
         ImageProcessor preBlurred = Tools.blur(original, this.preBlur, this.preBlurIterations);
         ImageProcessor difference = Tools.difference(getEdges(preBlurred), getEdges(Tools.blur(preBlurred, this.blur)));
         ImageProcessor scoreImage = Tools.power(difference, labDifferencePower);
-
         if (Math.max(scoreImage.getWidth(), scoreImage.getHeight()) > this.maskApproximationSize) {
             scoreImage = Tools.resize(scoreImage, this.maskApproximationSize, 2);
         }
@@ -120,69 +158,81 @@ public class DeviationScoreRegions_2_differentSizes
         if (this.progressListener != null) {
             this.progressListener.progressUpdate(0.15D, "Score Clustering");
         }
-        List scorePoints = Tools.imageProcessorToPoints(scoreImage, this.scoreImageThreshold);
+
+        List<Point> scorePoints = Tools.imageProcessorToPoints(scoreImage, this.scoreImageThreshold);
         ScoreDbscan scoreDbscan = new ScoreDbscan();
         scoreDbscan.setScoreImage(scoreImage);
         scoreDbscan.setScoreThreshold(this.scoreClusteringThreshold);
-        double breite = Math.sqrt(scoreImage.getPixelCount());
+        double breite = Math.sqrt((double)scoreImage.getPixelCount());
         int epsilon = (int)Math.round(breite * this.epsilonPercentage);
-
         double scorePointDensity = 0.0D;
-        for (Point p : scorePoints) {
-            scorePointDensity += Math.min(scoreImage.getPixelValue(p.x, p.y) / this.scoreClusteringThreshold, 1.0D);
-        }
-        scorePointDensity /= scoreImage.getPixelCount();
 
-        int minPts = (int)Math.round(Math.pow(epsilon + 1, 2.0D) * scorePointDensity * this.minPtsScorePointDensityMultiplier);
+        Point p;
+        for(Iterator i$ = scorePoints.iterator(); i$.hasNext(); scorePointDensity += Math.min((double)scoreImage.getPixelValue(p.x, p.y) / this.scoreClusteringThreshold, 1.0D)) {
+            p = (Point)i$.next();
+        }
+
+        scorePointDensity /= (double)scoreImage.getPixelCount();
+        int minPts = (int)Math.round(Math.pow((double)(epsilon + 1), 2.0D) * scorePointDensity * this.minPtsScorePointDensityMultiplier);
         this.mask = new ByteProcessor(scoreImage.getWidth(), scoreImage.getHeight());
         this.mask.setColor(Color.white);
-        List clusters = scoreDbscan.get(scorePoints, epsilon, minPts);
+        List<List<Point>> clusters = scoreDbscan.get(scorePoints, epsilon, minPts);
         if (DEBUG.getVerbose()) {
             System.out.println("epsilon = " + epsilon + " scorePointDensity = " + scorePointDensity + " minPts = " + minPts);
             String str = "";
             Tools.showImage("debug", Tools.write(str, Tools.drawClusters(clusters, new ColorProcessor(this.mask.getWidth(), this.mask.getHeight()), false, true)), "DBSCAN Cluster", true);
         }
-        DbscanTools.sortBySiye(clusters);
 
+        DbscanTools.sortBySiye(clusters);
         if (this.progressListener != null) {
             this.progressListener.progressUpdate(0.5D, "Mask Approximation");
         }
 
-        for (List cluster : clusters)
-        {
-            if (cluster.size() / ((List)clusters.get(0)).size() < this.mainClusterSize)
-            {
+        Iterator i$ = clusters.iterator();
+
+        List colorRegions;
+        Iterator it;
+        while(it.hasNext()) {
+            colorRegions = (List)i$.next();
+            if ((double)colorRegions.size() / (double)((List)clusters.get(0)).size() < this.mainClusterSize) {
                 break;
             }
 
-            eps = (int)Math.round(breite * this.convexHullLinkingEpsilonPercentage);
-            for (Point p : cluster) {
-                List rangePoints = scoreDbscan.range(p, eps);
-                if (rangePoints.size() >= minPts)
-                    if (this.convexHullLinking)
+            int eps = (int)Math.round(breite * this.convexHullLinkingEpsilonPercentage);
+            i$ = colorRegions.iterator();
+
+            while(i$.hasNext()) {
+                Point p = (Point)i$.next();
+                List<Point> rangePoints = scoreDbscan.range(p, eps);
+                if (rangePoints.size() >= minPts) {
+                    if (this.convexHullLinking) {
                         this.mask.fillPolygon(ConvexHullTools.get(rangePoints));
-                    else
+                    } else {
                         this.mask.fillOval(p.x, p.y, eps, eps);
+                    }
+                }
             }
         }
-        int eps;
+
         if (DEBUG.getVerbose()) {
             Tools.showImage("debug", this.mask, "Approximation Mask", true);
         }
 
         this.mask = Tools.addBorder(this.mask, this.addedBorderSize);
         this.mask.erode();
-        for (int i = 0; i < this.nrOfErodes; i++) {
+
+        int maxSize;
+        for(maxSize = 0; maxSize < this.nrOfErodes; ++maxSize) {
             this.mask.erode();
         }
 
         this.mask = Morphological.close(this.mask, this.approxMapCloseSize);
         this.mask = Morphological.dilateByReconstruction(this.mask, this.approxMapReconstructSize);
-
         this.mask = Tools.removeBorder(this.mask, this.addedBorderSize);
         if (DEBUG.getVerbose()) {
             Tools.save(this.mask);
         }
+
         scoreImage = Tools.cropToMask(scoreImage, this.mask);
         if (DEBUG.getVerbose()) {
             Tools.showImage("debug", Tools.cropToMask(resized, this.mask), "cropped");
@@ -196,49 +246,53 @@ public class DeviationScoreRegions_2_differentSizes
             this.progressListener.progressUpdate(0.75D, "Region Scoring");
         }
 
-        int maxSize = (int)Math.round(Tools.imageProcessorToPoints(this.mask, 1).size() * this.maxScoreRegionSize);
+        maxSize = (int)Math.round((double)Tools.imageProcessorToPoints(this.mask, 1).size() * this.maxScoreRegionSize);
         if (DEBUG.getVerbose()) {
             System.out.println("maxSize == " + maxSize);
         }
 
-        List colorRegions = ColorRegionTools.getRegionsFromImageProcessor(resized, this.deltaEToBeSimilar, this.mask);
+        colorRegions = ColorRegionTools.getRegionsFromImageProcessor(resized, this.deltaEToBeSimilar, this.mask);
         if (DEBUG.getVerbose()) {
             Tools.save(ColorRegionTools.draw(colorRegions, this.mask.getWidth(), this.mask.getHeight()));
         }
 
         ColorRegion[][] colorRegionMap = new ColorRegion[this.mask.getWidth()][this.mask.getHeight()];
-        for (Iterator i$ = colorRegions.iterator(); i$.hasNext(); ) { colorRegion = (ColorRegion)i$.next();
-            for (Point p : colorRegion.getPixels())
-                colorRegionMap[p.x][p.y] = colorRegion;
+        i$ = colorRegions.iterator();
+
+        while(i$.hasNext()) {
+            ColorRegion colorRegion = (ColorRegion)i$.next();
+
+            Point p;
+            for(Iterator i$ = colorRegion.getPixels().iterator(); i$.hasNext(); colorRegionMap[p.x][p.y] = colorRegion) {
+                p = (Point)i$.next();
+            }
         }
-        ColorRegion colorRegion;
+
         int iteration = 0;
-        Set seedRegions = new HashSet(colorRegions);
-        Set nextSeedRegions = new HashSet();
+        Set<ColorRegion> seedRegions = new HashSet(colorRegions);
+        Set<ColorRegion> nextSeedRegions = new HashSet();
         Iterator iterator = seedRegions.iterator();
-        while (iterator.hasNext())
-        {
+
+        while(iterator.hasNext()) {
             ColorRegion colorRegion = (ColorRegion)iterator.next();
             iterator.remove();
-
             ColorRegion outline = new ColorRegion(ColorRegionTools.getOutline(colorRegion, 1, this.mask.getWidth(), this.mask.getHeight()));
-
             double maskBoundaryOverlap = ColorRegionTools.overlap(outline, this.mask);
             double scoreBoundaryOverlap = ColorRegionTools.overlap(outline, scoreImage);
             double maskRelevancy = maskBoundaryOverlap * scoreBoundaryOverlap;
+            boolean clearRegion = maskBoundaryOverlap <= this.minMBO - (double)iteration * this.relevancyIterationDec && maskRelevancy <= this.minMaskRelevancy - (double)iteration * this.relevancyIterationDec && colorRegion.size() <= maxSize;
+            if (clearRegion) {
+                Iterator i$ = colorRegion.getOutline().iterator();
 
-            boolean clearRegion = (maskBoundaryOverlap <= this.minMBO - iteration * this.relevancyIterationDec) && (maskRelevancy <= this.minMaskRelevancy - iteration * this.relevancyIterationDec) && (colorRegion.size() <= maxSize);
-            if (clearRegion)
-            {
-                for (Point outlinePoint : colorRegion.getOutline()) {
+                while(i$.hasNext()) {
+                    Point outlinePoint = (Point)i$.next();
                     nextSeedRegions.add(colorRegionMap[outlinePoint.x][outlinePoint.y]);
                 }
 
                 colorRegions.remove(colorRegion);
             }
 
-            if ((DEBUG.getVerbose()) &&
-                    (colorRegion.size() > 20) && (maskBoundaryOverlap < 0.85D)) {
+            if (DEBUG.getVerbose() && colorRegion.size() > 20 && maskBoundaryOverlap < 0.85D) {
                 String s = "MBO=" + Tools.formatNumber(maskBoundaryOverlap) + " SBO=" + Tools.formatNumber(scoreBoundaryOverlap) + " REL=" + Tools.formatNumber(maskRelevancy);
                 Color c = clearRegion ? Color.red : Color.green;
                 Tools.showImage("debug", Tools.write(s, ColorRegionTools.draw(colorRegion, ColorRegionTools.draw(colorRegions, this.mask.getWidth(), this.mask.getHeight()), true, c)), "iteration " + iteration, this.saveMaskRelevancyPix);
@@ -247,10 +301,11 @@ public class DeviationScoreRegions_2_differentSizes
             if (seedRegions.isEmpty()) {
                 seedRegions.addAll(nextSeedRegions);
                 nextSeedRegions.clear();
-                iteration++;
+                ++iteration;
             }
         }
-        if ((DEBUG.getVerbose()) && (this.saveMaskRelevancyPix)) {
+
+        if (DEBUG.getVerbose() && this.saveMaskRelevancyPix) {
             Tools.showImage("debug", ColorRegionTools.draw(colorRegions, this.mask.getWidth(), this.mask.getHeight()), "color regions");
         }
 
@@ -259,17 +314,16 @@ public class DeviationScoreRegions_2_differentSizes
         }
 
         this.mask = ColorRegionTools.mask(colorRegions, this.mask.getWidth(), this.mask.getHeight());
-        if ((DEBUG.getVerbose()) && (this.saveMaskRelevancyPix))
-        {
+        if (DEBUG.getVerbose() && this.saveMaskRelevancyPix) {
             Tools.save(this.mask);
         }
+
         this.mask = this.mask.resize(original.getWidth(), original.getHeight());
         original.setMask(this.mask);
         return Tools.cropToMask(original);
     }
 
-    public String toString()
-    {
+    public String toString() {
         return "DSR_2";
     }
 }

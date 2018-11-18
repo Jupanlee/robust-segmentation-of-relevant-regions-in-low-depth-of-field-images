@@ -1,3 +1,8 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
 package deviationScoreRegions.scoring;
 
 import basics.Tools;
@@ -9,24 +14,22 @@ import ij.process.ImageProcessor;
 import java.awt.Point;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Vector;
 
-public class ScoreDeviation
-        implements Batch.Batchable
-{
+public class ScoreDeviation implements Batchable {
     private double GAUSSBLURRADIUS = 0.85D;
     private int REFACTORITERATIONS = 10;
     private double edgeImagePower = 1.0D;
     private double finalPower = 2.5D;
-    private Batch.Batchable edgeFilter;
+    private Batchable edgeFilter;
 
-    public ScoreDeviation(Batch.Batchable score)
-    {
+    public ScoreDeviation(Batchable score) {
         this.edgeFilter = score;
     }
 
-    public ScoreDeviation(Batch.Batchable edgeFilter, double gaussBlurRadius, int refactorations, double finalPower, double edgeImagePower) {
+    public ScoreDeviation(Batchable edgeFilter, double gaussBlurRadius, int refactorations, double finalPower, double edgeImagePower) {
         this.edgeFilter = edgeFilter;
         this.GAUSSBLURRADIUS = gaussBlurRadius;
         this.REFACTORITERATIONS = refactorations;
@@ -36,20 +39,19 @@ public class ScoreDeviation
 
     public ImageProcessor run(ImageProcessor imageProcessor) {
         ImageProcessor debugFirstBlurrImage = null;
-
-        List edgeImages = new ArrayList();
-
+        List<ImageProcessor> edgeImages = new ArrayList();
         ImageProcessor refactured = imageProcessor.duplicate();
 
-        for (int i = 0; i <= this.REFACTORITERATIONS; i++) {
+        int x;
+        for(x = 0; x <= this.REFACTORITERATIONS; ++x) {
             ImageProcessor edgeImage = this.edgeFilter.run(refactured);
             edgeImage = Tools.power(edgeImage, this.edgeImagePower);
             edgeImages.add(edgeImage);
             if (DEBUG.getVerbose()) {
-                Tools.showImage("debug", edgeImage, "iteration == " + i, false);
+                Tools.showImage("debug", edgeImage, "iteration == " + x, false);
             }
 
-            if (i == 0) {
+            if (x == 0) {
                 debugFirstBlurrImage = edgeImage.duplicate();
             }
 
@@ -57,50 +59,56 @@ public class ScoreDeviation
         }
 
         double[][] scores = new double[imageProcessor.getWidth()][imageProcessor.getHeight()];
-        for (int x = 0; x < imageProcessor.getWidth(); x++) {
-            for (int y = 0; y < imageProcessor.getHeight(); y++)
-            {
-                Vector scoresAtCurrentXY = new Vector();
-                for (ImageProcessor edgeImage : edgeImages) {
-                    scoresAtCurrentXY.add(new Double(edgeImage.getPixel(x, y)));
+
+        for(x = 0; x < imageProcessor.getWidth(); ++x) {
+            for(x = 0; x < imageProcessor.getHeight(); ++x) {
+                Vector<Double> scoresAtCurrentXY = new Vector();
+                Iterator i$ = edgeImages.iterator();
+
+                while(i$.hasNext()) {
+                    ImageProcessor edgeImage = (ImageProcessor)i$.next();
+                    scoresAtCurrentXY.add(new Double((double)edgeImage.getPixel(x, x)));
                 }
 
-                scores[x][y] = Tools.getStandardDeviation(scoresAtCurrentXY);
+                scores[x][x] = Tools.getStandardDeviation(scoresAtCurrentXY);
             }
         }
 
         Tools.save(Tools.write("std. dev. of old scoreDeviation", Tools.createImageProcessorFromArray(scores)));
-
         ImageProcessor standardDeviationImage = new ByteProcessor(((ImageProcessor)edgeImages.get(0)).getWidth(), ((ImageProcessor)edgeImages.get(0)).getHeight());
-        for (int x = 0; x < imageProcessor.getWidth(); x++) {
-            for (int y = 0; y < imageProcessor.getHeight(); y++)
-            {
-                Vector neighbourScores = new Vector();
-                for (Point neighbour : Tools.get8Neighbourhood(new Point(x, y), imageProcessor.getWidth(), imageProcessor.getHeight())) {
-                    neighbourScores.add(Double.valueOf(scores[neighbour.x][neighbour.y]));
+
+        for(x = 0; x < imageProcessor.getWidth(); ++x) {
+            for(int y = 0; y < imageProcessor.getHeight(); ++y) {
+                Vector<Double> neighbourScores = new Vector();
+                Iterator i$ = Tools.get8Neighbourhood(new Point(x, y), imageProcessor.getWidth(), imageProcessor.getHeight()).iterator();
+
+                while(i$.hasNext()) {
+                    Point neighbour = (Point)i$.next();
+                    neighbourScores.add(scores[neighbour.x][neighbour.y]);
                 }
+
                 standardDeviationImage.putPixelValue(x, y, Math.pow(Tools.getMeanDouble(neighbourScores), this.finalPower));
             }
-
         }
 
         return standardDeviationImage;
     }
 
     public static void main(String[] args) throws IOException {
-        for (String fileName : Tools.getFilesFromDirectory("data/batch/images/base", ".jpg")) {
-            ImageProcessor original = Tools.resize(Tools.loadImageProcessor(fileName), 500);
+        Iterator i$ = Tools.getFilesFromDirectory("data/batch/images/base", ".jpg").iterator();
 
+        while(i$.hasNext()) {
+            String fileName = (String)i$.next();
+            ImageProcessor original = Tools.resize(Tools.loadImageProcessor(fileName), 500);
             double blur = 0.8D;
             int blurIterations = 10;
             double labDifferencePower = 1.0D;
             double finalPower = 2.0D;
-
-            Tools.save(new OldScoreLabDifference().run(original));
-            Tools.save(new ScoreBlurDifference().run(original));
-
-            Tools.save(new ScoreDeviation(new OldScoreLabDifference(), 1.0D, 10, 2.0D, 1.0D).run(original));
-            Tools.save(new ScoreDeviation(new ScoreBlurDifference(), blur, blurIterations, finalPower, labDifferencePower).run(original));
+            Tools.save((new OldScoreLabDifference()).run(original));
+            Tools.save((new ScoreBlurDifference()).run(original));
+            Tools.save((new ScoreDeviation(new OldScoreLabDifference(), 1.0D, 10, 2.0D, 1.0D)).run(original));
+            Tools.save((new ScoreDeviation(new ScoreBlurDifference(), blur, blurIterations, finalPower, labDifferencePower)).run(original));
         }
+
     }
 }

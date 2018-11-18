@@ -1,3 +1,8 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
 package deviationScoreRegions;
 
 import basics.MImage;
@@ -17,74 +22,112 @@ import ij.process.ImageProcessor;
 import java.awt.Color;
 import java.awt.Point;
 import java.io.IOException;
-import java.io.PrintStream;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import others.morphological.Morphological;
 
-public class DeviationScoreRegions_Tuned2
-        implements Batch.Batchable
-{
+public class DeviationScoreRegions_Tuned2 implements Batchable {
     double preBlur = 1.25D;
     int preBlurIterations = 3;
-    double blur = this.preBlur;
-    int scoreImageThreshold = 33;
-    double scoreClusteringThreshold = 127.5D;
+    double blur;
+    int scoreImageThreshold;
+    double scoreClusteringThreshold;
     static double labDifferencePower = 2.0D;
-    double finalPower = 4.0D;
-
-    double epsilonPercentage = 0.025D;
-    double minPtsScorePointDensityMultiplier = 1.0D;
-    double mainClusterSize = 0.5D;
-
-    double convexHullLinkingEpsilonPercentage = 0.05D;
-
-    int morphImageSize = 400;
-    int approxMapDilateSize = (int)(this.morphImageSize * 0.0D);
-    int approxMapCloseSize = (int)(this.morphImageSize * 0.0025D);
-    int approxMapReconstructSize = (int)(this.morphImageSize * 0.5D);
-    int addedBorderSize = 0;
-
-    double maxScoreRegionSize = 0.33D;
-    double deltaEToBeSimilar = 25.0D;
-    double approxMapReconstructSizePercentage = 0.33D;
-    double relevancyStart = 0.85D;
-    double relevancyIterationDec = 0.33D;
-    double minMaskRelevancy = 0.75D;
-
-    boolean saveMaskRelevancyPix = false;
+    double finalPower;
+    double epsilonPercentage;
+    double minPtsScorePointDensityMultiplier;
+    double mainClusterSize;
+    double convexHullLinkingEpsilonPercentage;
+    int morphImageSize;
+    int approxMapDilateSize;
+    int approxMapCloseSize;
+    int approxMapReconstructSize;
+    int addedBorderSize;
+    double maxScoreRegionSize;
+    double deltaEToBeSimilar;
+    double approxMapReconstructSizePercentage;
+    double relevancyStart;
+    double relevancyIterationDec;
+    double minMaskRelevancy;
+    boolean saveMaskRelevancyPix;
     ImageProcessor mask;
-    DebugInfoShower debugInfoShower = null;
-
-    private ProgressListener progressListener = null;
+    DebugInfoShower debugInfoShower;
+    private ProgressListener progressListener;
 
     public void setProgressListener(ProgressListener progressListener) {
         this.progressListener = progressListener;
     }
 
     public DeviationScoreRegions_Tuned2() {
+        this.blur = this.preBlur;
+        this.scoreImageThreshold = 33;
+        this.scoreClusteringThreshold = 127.5D;
+        this.finalPower = 4.0D;
+        this.epsilonPercentage = 0.025D;
+        this.minPtsScorePointDensityMultiplier = 1.0D;
+        this.mainClusterSize = 0.5D;
+        this.convexHullLinkingEpsilonPercentage = 0.05D;
+        this.morphImageSize = 400;
+        this.approxMapDilateSize = (int)((double)this.morphImageSize * 0.0D);
+        this.approxMapCloseSize = (int)((double)this.morphImageSize * 0.0025D);
+        this.approxMapReconstructSize = (int)((double)this.morphImageSize * 0.5D);
+        this.addedBorderSize = 0;
+        this.maxScoreRegionSize = 0.33D;
+        this.deltaEToBeSimilar = 25.0D;
+        this.approxMapReconstructSizePercentage = 0.33D;
+        this.relevancyStart = 0.85D;
+        this.relevancyIterationDec = 0.33D;
+        this.minMaskRelevancy = 0.75D;
+        this.saveMaskRelevancyPix = false;
+        this.debugInfoShower = null;
+        this.progressListener = null;
     }
 
     public DeviationScoreRegions_Tuned2(ProgressListener progressListener) {
-        setProgressListener(progressListener);
+        this.blur = this.preBlur;
+        this.scoreImageThreshold = 33;
+        this.scoreClusteringThreshold = 127.5D;
+        this.finalPower = 4.0D;
+        this.epsilonPercentage = 0.025D;
+        this.minPtsScorePointDensityMultiplier = 1.0D;
+        this.mainClusterSize = 0.5D;
+        this.convexHullLinkingEpsilonPercentage = 0.05D;
+        this.morphImageSize = 400;
+        this.approxMapDilateSize = (int)((double)this.morphImageSize * 0.0D);
+        this.approxMapCloseSize = (int)((double)this.morphImageSize * 0.0025D);
+        this.approxMapReconstructSize = (int)((double)this.morphImageSize * 0.5D);
+        this.addedBorderSize = 0;
+        this.maxScoreRegionSize = 0.33D;
+        this.deltaEToBeSimilar = 25.0D;
+        this.approxMapReconstructSizePercentage = 0.33D;
+        this.relevancyStart = 0.85D;
+        this.relevancyIterationDec = 0.33D;
+        this.minMaskRelevancy = 0.75D;
+        this.saveMaskRelevancyPix = false;
+        this.debugInfoShower = null;
+        this.progressListener = null;
+        this.setProgressListener(progressListener);
     }
 
     public static void noiseTest(int size) throws IOException {
-        for (String fileName : Tools.getFilesFromDirectory("../data/batch/images/tmp", ".jpg")) {
+        Iterator i$ = Tools.getFilesFromDirectory("../data/batch/images/tmp", ".jpg").iterator();
+
+        while(i$.hasNext()) {
+            String fileName = (String)i$.next();
             ImageProcessor imageProcessor = Tools.resize(Tools.loadImageProcessor(fileName), size);
-            for (double noiseSize = 0.0D; noiseSize < 10.0D; noiseSize += 1.0D) {
+
+            for(double noiseSize = 0.0D; noiseSize < 10.0D; ++noiseSize) {
                 ImageProcessor noised = Tools.addNoise(imageProcessor, noiseSize);
-                new DeviationScoreRegions_Tuned2().run(noised);
+                (new DeviationScoreRegions_Tuned2()).run(noised);
                 Tools.save(Tools.cropToMask(noised));
             }
         }
+
     }
 
-    public static void main(String[] args)
-            throws IOException
-    {
+    public static void main(String[] args) throws IOException {
         Batch.run(new DeviationScoreRegions_Tuned2(), 0, "../../../data/batch/images/flickr");
     }
 
@@ -92,14 +135,14 @@ public class DeviationScoreRegions_Tuned2
         ImageProcessor edges = new ByteProcessor(ip.getWidth(), ip.getHeight());
         MImage mImage = new MImage(ip);
 
-        for (int x = 0; x < ip.getWidth(); x++) {
-            for (int y = 0; y < ip.getHeight(); y++) {
+        for(int x = 0; x < ip.getWidth(); ++x) {
+            for(int y = 0; y < ip.getHeight(); ++y) {
                 double deltaE = Tools.euklidDistance(mImage.getLab(x, y), mImage.getNeigbourMeanLab(x, y, 1));
-
                 int value = (int)Math.pow(deltaE, labDifferencePower);
                 edges.putPixel(x, y, value);
             }
         }
+
         return edges;
     }
 
@@ -107,76 +150,84 @@ public class DeviationScoreRegions_Tuned2
         if (DEBUG.getVerbose()) {
             Tools.save(original);
         }
+
         int width = original.getWidth();
         int height = original.getHeight();
-
-        if (this.progressListener != null) this.progressListener.progressUpdate(0.0D, "Scoring");
+        if (this.progressListener != null) {
+            this.progressListener.progressUpdate(0.0D, "Scoring");
+        }
 
         ImageProcessor preBlurred = Tools.blur(original, this.preBlur, this.preBlurIterations);
         ImageProcessor difference = Tools.difference(getEdges(preBlurred), getEdges(Tools.blur(preBlurred, this.blur)));
         ImageProcessor scoreImage = Tools.power(difference, labDifferencePower);
         scoreImage.threshold(this.scoreImageThreshold);
-
         if (DEBUG.getVerbose()) {
             Tools.save(scoreImage);
         }
 
-        if (this.progressListener != null) this.progressListener.progressUpdate(0.15D, "Score Clustering");
+        if (this.progressListener != null) {
+            this.progressListener.progressUpdate(0.15D, "Score Clustering");
+        }
 
-        List scorePoints = Tools.imageProcessorToPoints(scoreImage, this.scoreImageThreshold);
+        List<Point> scorePoints = Tools.imageProcessorToPoints(scoreImage, this.scoreImageThreshold);
         ScoreDbscan scoreDbscan = new ScoreDbscan();
         scoreDbscan.setScoreImage(scoreImage);
         scoreDbscan.setScoreThreshold(this.scoreClusteringThreshold);
-        double breite = Math.sqrt(original.getPixelCount());
+        double breite = Math.sqrt((double)original.getPixelCount());
         int epsilon = (int)Math.round(breite * this.epsilonPercentage);
-
         double scorePointDensity = 0.0D;
-        for (Point p : scorePoints) {
-            scorePointDensity += Math.min(scoreImage.getPixelValue(p.x, p.y) / this.scoreClusteringThreshold, 1.0D);
-        }
-        scorePointDensity /= scoreImage.getPixelCount();
-        System.out.println("scorePointDensity == " + scorePointDensity);
 
-        int minPts = (int)Math.round(Math.pow(epsilon + 1, 2.0D) * scorePointDensity * this.minPtsScorePointDensityMultiplier);
+        Point p;
+        for(Iterator i$ = scorePoints.iterator(); i$.hasNext(); scorePointDensity += Math.min((double)scoreImage.getPixelValue(p.x, p.y) / this.scoreClusteringThreshold, 1.0D)) {
+            p = (Point)i$.next();
+        }
+
+        scorePointDensity /= (double)scoreImage.getPixelCount();
+        System.out.println("scorePointDensity == " + scorePointDensity);
+        int minPts = (int)Math.round(Math.pow((double)(epsilon + 1), 2.0D) * scorePointDensity * this.minPtsScorePointDensityMultiplier);
         this.mask = new ByteProcessor(width, height);
         this.mask.setColor(Color.white);
-        List clusters = scoreDbscan.get(scorePoints, epsilon, minPts);
+        List<List<Point>> clusters = scoreDbscan.get(scorePoints, epsilon, minPts);
         if (DEBUG.getVerbose()) {
             System.out.println("epsilon = " + epsilon + " scorePointDensity = " + scorePointDensity + " minPts = " + minPts);
             String str = "";
             Tools.showImage("debug", Tools.write(str, Tools.drawClusters(clusters, new ColorProcessor(original.getWidth(), original.getHeight()), false, true)), "DBSCAN Cluster", true);
         }
+
         DbscanTools.sortBySiye(clusters);
+        if (this.progressListener != null) {
+            this.progressListener.progressUpdate(0.5D, "Mask Approximation");
+        }
 
-        if (this.progressListener != null) this.progressListener.progressUpdate(0.5D, "Mask Approximation");
+        Iterator i$ = clusters.iterator();
 
-        for (List cluster : clusters)
-        {
-            if (cluster.size() / ((List)clusters.get(0)).size() < this.mainClusterSize)
-            {
+        while(i$.hasNext()) {
+            List<Point> cluster = (List)i$.next();
+            if ((double)cluster.size() / (double)((List)clusters.get(0)).size() < this.mainClusterSize) {
                 break;
             }
 
-            for (Point p : cluster) {
-                List rangePoints = scoreDbscan.range(p, (int)Math.round(breite * this.convexHullLinkingEpsilonPercentage));
+            Iterator i$ = cluster.iterator();
+
+            while(i$.hasNext()) {
+                Point p = (Point)i$.next();
+                List<Point> rangePoints = scoreDbscan.range(p, (int)Math.round(breite * this.convexHullLinkingEpsilonPercentage));
                 if (rangePoints.size() >= minPts) {
                     this.mask.fillPolygon(ConvexHullTools.get(rangePoints));
                 }
             }
         }
+
         if (DEBUG.getVerbose()) {
             Tools.showImage("debug", this.mask, "Approximation Mask", true);
         }
 
         this.mask = Tools.resize(this.mask, this.morphImageSize);
         this.mask = Tools.addBorder(this.mask, this.addedBorderSize);
-
         this.mask = Morphological.dilate(this.mask, this.approxMapDilateSize);
         this.mask = Morphological.close(this.mask, this.approxMapCloseSize);
         this.mask = Morphological.dilateByReconstruction(this.mask, this.approxMapReconstructSize);
-
         int longestSide = Math.max(width, height);
-
         this.mask = Tools.removeBorder(this.mask, this.addedBorderSize);
         this.mask = Tools.resize(this.mask, longestSide);
         if (DEBUG.getVerbose()) {
@@ -188,51 +239,57 @@ public class DeviationScoreRegions_Tuned2
             Tools.showImage("debug", Tools.cropToMask(original, this.mask), "cropped");
         }
 
-        if (this.progressListener != null) this.progressListener.progressUpdate(0.75D, "Region Scoring");
+        if (this.progressListener != null) {
+            this.progressListener.progressUpdate(0.75D, "Region Scoring");
+        }
 
-        int maxSize = (int)Math.round(Tools.imageProcessorToPoints(this.mask, 1).size() * this.maxScoreRegionSize);
+        int maxSize = (int)Math.round((double)Tools.imageProcessorToPoints(this.mask, 1).size() * this.maxScoreRegionSize);
         if (DEBUG.getVerbose()) {
             System.out.println("maxSize == " + maxSize);
         }
 
-        List colorRegions = ColorRegionTools.getRegionsFromImageProcessor(original, this.deltaEToBeSimilar, this.mask);
+        List<ColorRegion> colorRegions = ColorRegionTools.getRegionsFromImageProcessor(original, this.deltaEToBeSimilar, this.mask);
         if (DEBUG.getVerbose()) {
             Tools.save(ColorRegionTools.draw(colorRegions, width, height));
         }
 
         ColorRegion[][] colorRegionMap = new ColorRegion[width][height];
-        for (Iterator i$ = colorRegions.iterator(); i$.hasNext(); ) { colorRegion = (ColorRegion)i$.next();
-            for (Point p : colorRegion.getPixels())
-                colorRegionMap[p.x][p.y] = colorRegion;
+        Iterator i$ = colorRegions.iterator();
+
+        while(i$.hasNext()) {
+            ColorRegion colorRegion = (ColorRegion)i$.next();
+
+            Point p;
+            for(Iterator i$ = colorRegion.getPixels().iterator(); i$.hasNext(); colorRegionMap[p.x][p.y] = colorRegion) {
+                p = (Point)i$.next();
+            }
         }
-        ColorRegion colorRegion;
+
         int iteration = 0;
-        Set seedRegions = new HashSet(colorRegions);
-        Set nextSeedRegions = new HashSet();
+        Set<ColorRegion> seedRegions = new HashSet(colorRegions);
+        Set<ColorRegion> nextSeedRegions = new HashSet();
         Iterator iterator = seedRegions.iterator();
-        while (iterator.hasNext())
-        {
+
+        while(iterator.hasNext()) {
             ColorRegion colorRegion = (ColorRegion)iterator.next();
             iterator.remove();
-
             ColorRegion outline = new ColorRegion(ColorRegionTools.getOutline(colorRegion, 1, width, height));
-
             double maskBoundaryOverlap = ColorRegionTools.overlap(outline, this.mask);
             double scoreBoundaryOverlap = ColorRegionTools.overlap(outline, scoreImage);
             double maskRelevancy = maskBoundaryOverlap * scoreBoundaryOverlap;
+            boolean clearRegion = maskBoundaryOverlap <= this.relevancyStart - (double)iteration * this.relevancyIterationDec && maskRelevancy <= this.minMaskRelevancy - (double)iteration * this.relevancyIterationDec && colorRegion.size() <= maxSize;
+            if (clearRegion) {
+                Iterator i$ = colorRegion.getOutline().iterator();
 
-            boolean clearRegion = (maskBoundaryOverlap <= this.relevancyStart - iteration * this.relevancyIterationDec) && (maskRelevancy <= this.minMaskRelevancy - iteration * this.relevancyIterationDec) && (colorRegion.size() <= maxSize);
-            if (clearRegion)
-            {
-                for (Point outlinePoint : colorRegion.getOutline()) {
+                while(i$.hasNext()) {
+                    Point outlinePoint = (Point)i$.next();
                     nextSeedRegions.add(colorRegionMap[outlinePoint.x][outlinePoint.y]);
                 }
 
                 colorRegions.remove(colorRegion);
             }
 
-            if ((DEBUG.getVerbose()) &&
-                    (colorRegion.size() > 20) && (maskBoundaryOverlap < 0.85D)) {
+            if (DEBUG.getVerbose() && colorRegion.size() > 20 && maskBoundaryOverlap < 0.85D) {
                 String s = "MBO=" + Tools.formatNumber(maskBoundaryOverlap) + " SBO=" + Tools.formatNumber(scoreBoundaryOverlap) + " REL=" + Tools.formatNumber(maskRelevancy);
                 Color c = clearRegion ? Color.red : Color.green;
                 Tools.showImage("debug", Tools.write(s, ColorRegionTools.draw(colorRegion, ColorRegionTools.draw(colorRegions, width, height), true, c)), "iteration " + iteration, this.saveMaskRelevancyPix);
@@ -241,18 +298,20 @@ public class DeviationScoreRegions_Tuned2
             if (seedRegions.isEmpty()) {
                 seedRegions.addAll(nextSeedRegions);
                 nextSeedRegions.clear();
-                iteration++;
+                ++iteration;
             }
         }
-        if ((DEBUG.getVerbose()) && (this.saveMaskRelevancyPix)) {
+
+        if (DEBUG.getVerbose() && this.saveMaskRelevancyPix) {
             Tools.showImage("debug", ColorRegionTools.draw(colorRegions, width, height), "color regions");
         }
 
-        if (this.progressListener != null) this.progressListener.progressUpdate(1.0D, "");
+        if (this.progressListener != null) {
+            this.progressListener.progressUpdate(1.0D, "");
+        }
 
         this.mask = ColorRegionTools.mask(colorRegions, width, height);
-        if ((DEBUG.getVerbose()) && (this.saveMaskRelevancyPix))
-        {
+        if (DEBUG.getVerbose() && this.saveMaskRelevancyPix) {
             Tools.save(this.mask);
         }
 

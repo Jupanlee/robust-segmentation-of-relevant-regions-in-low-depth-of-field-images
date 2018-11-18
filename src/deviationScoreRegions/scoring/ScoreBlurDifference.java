@@ -1,3 +1,8 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
 package deviationScoreRegions.scoring;
 
 import basics.Tools;
@@ -5,29 +10,32 @@ import basics.javaAddons.DEBUG;
 import evaluation.Batch.Batchable;
 import ij.process.ImageProcessor;
 import java.io.IOException;
+import java.util.Iterator;
 
-public class ScoreBlurDifference
-        implements Batch.Batchable
-{
+public class ScoreBlurDifference implements Batchable {
     private double power;
     private double secondBlur;
     private double firstBlur;
     private boolean userDefined = false;
 
     public static void main(String[] args) throws IOException {
-        for (String fileName : Tools.getFilesFromDirectory("data/batch/images/base", ".jpg"))
-            for (int size = 500; size <= 500; size += 100) {
+        Iterator i$ = Tools.getFilesFromDirectory("data/batch/images/base", ".jpg").iterator();
+
+        while(i$.hasNext()) {
+            String fileName = (String)i$.next();
+
+            for(int size = 500; size <= 500; size += 100) {
                 ImageProcessor original = Tools.resize(Tools.loadImageProcessor(fileName), size);
-                Tools.save(new ScoreBlurDifference().run(original));
+                Tools.save((new ScoreBlurDifference()).run(original));
             }
+        }
+
     }
 
-    public ScoreBlurDifference()
-    {
+    public ScoreBlurDifference() {
     }
 
-    public ScoreBlurDifference(double power, double firstBlur, double secondBlur)
-    {
+    public ScoreBlurDifference(double power, double firstBlur, double secondBlur) {
         this.power = power;
         this.secondBlur = secondBlur;
         this.firstBlur = firstBlur;
@@ -36,10 +44,10 @@ public class ScoreBlurDifference
 
     public ImageProcessor run(ImageProcessor i) {
         if (!this.userDefined) {
-            double value = Math.log(Math.sqrt(i.getPixelCount()));
-            this.firstBlur = (value * 0.3D);
-            this.secondBlur = (this.firstBlur + Math.log(this.firstBlur));
-            this.power = (1.0D + Math.sqrt(value));
+            double value = Math.log(Math.sqrt((double)i.getPixelCount()));
+            this.firstBlur = value * 0.3D;
+            this.secondBlur = this.firstBlur + Math.log(this.firstBlur);
+            this.power = 1.0D + Math.sqrt(value);
         }
 
         return Tools.power(blurDifference(i, this.firstBlur, this.secondBlur, false), this.power);
@@ -51,15 +59,16 @@ public class ScoreBlurDifference
         return Tools.difference(a, b).convertToByte(true);
     }
 
-    public ImageProcessor test(ImageProcessor imageProcessor)
-    {
+    public ImageProcessor test(ImageProcessor imageProcessor) {
         if (DEBUG.getVerbose()) {
             Tools.save(imageProcessor);
         }
-        ImageProcessor differenceImage = run(imageProcessor);
+
+        ImageProcessor differenceImage = this.run(imageProcessor);
         if (DEBUG.getVerbose()) {
             Tools.save(differenceImage);
         }
+
         differenceImage = Tools.blur(differenceImage, 200.0D);
         differenceImage = Tools.multiply(differenceImage, 0.99D, 1.0D, 255);
         return differenceImage;
