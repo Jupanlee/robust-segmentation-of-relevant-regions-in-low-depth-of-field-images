@@ -1,9 +1,8 @@
 package others;
 
-public class testFileCreationspackage others;
-
 import basics.javaAddons.DEBUG;
-        import java.io.File;
+
+import java.io.File;
 
 public class testFileCreations
 {
@@ -17,5 +16,4 @@ public class testFileCreations
             new File("test/" + i + ".txt");
         }
     }
-} {
 }

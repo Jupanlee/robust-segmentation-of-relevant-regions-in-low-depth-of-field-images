@@ -8,6 +8,7 @@ import deviationScoreRegions.DeviationScoreRegions_Tuned;
 import ij.process.ImageProcessor;
 import java.awt.Color;
 import java.io.PrintStream;
+import java.util.Iterator;
 import java.util.Vector;
 
 public class Batch
@@ -59,7 +60,7 @@ public class Batch
         {
             Stopwatch stopwatch = new Stopwatch();
 
-            Vector evaluations = new Vector();
+            Vector<Evaluation> evaluations = new Vector();
             evaluations.add(new Evaluation(new EvaluateSpatialDistortion()));
 
             for (String fileName : Tools.getFilesFromDirectory(imagesDir, suffix, includeSubfolders))
@@ -68,7 +69,7 @@ public class Batch
                 {
                     String name = Tools.getFileNameWithoutDirectory(fileName);
                     DEBUG.println("Processing " + fileName);
-                    imageProcessor = Tools.loadImageProcessor(fileName);
+                    ImageProcessor imageProcessor = Tools.loadImageProcessor(fileName);
                     if (grayscale) imageProcessor = imageProcessor.convertToByte(true);
 
                     if ((Math.max(imageProcessor.getWidth(), imageProcessor.getHeight()) > width) &&
@@ -92,7 +93,7 @@ public class Batch
                     if (imageProcessor.getMask() != null) {
                         Tools.saveToFile(imageProcessor.getMask(), generatedMasksDirectory + "/" + Tools.getFileNameWithoutDirectory(fileName));
 
-                        reference = Tools.loadImageProcessor(referenceMaskDir + "/" + Tools.getNameWithoutExtension(fileName) + ".png");
+                        ImageProcessor reference = Tools.loadImageProcessor(referenceMaskDir + "/" + Tools.getNameWithoutExtension(fileName) + ".png");
                         if ((invertMask) && (reference != null)) reference.invert();
                         if (printSteps) Evaluation.printTitle();
 
@@ -107,6 +108,8 @@ public class Batch
             ImageProcessor reference;
             System.out.println("==================== SUMMARY ======================");
             System.out.println(stopwatch);
+
+            Iterator iter = evaluations.iterator();
             for (Evaluation evaluation : evaluations)
             {
                 evaluation.printStatisticSummary();

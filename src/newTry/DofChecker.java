@@ -7,6 +7,7 @@ import deviationScoreRegions.grow.ColorRegion;
 import deviationScoreRegions.grow.ColorRegionTools;
 import deviationScoreRegions.modular.ScoreClustering;
 import deviationScoreRegions.modular.scoreImage.DeviationScoreImage;
+import deviationScoreRegions.modular.scoreImage.DifferenceScoreImage;
 import deviationScoreRegions.modular.scoreImage.DifferenceScoreImage.DifferenceScoreImageParameter;
 import deviationScoreRegions.modular.scoreImage.ScoreImage;
 import deviationScoreRegions.modular.scoreImage.ScoreImageTools;
@@ -29,7 +30,7 @@ public class DofChecker
         int count = 0;
         int maxSize = 800;
 
-        List fileNames = Tools.getFilesFromDirectory("../../images/flickrtmp", ".jpg");
+        List<String> fileNames = Tools.getFilesFromDirectory("../../images/flickrtmp", ".jpg");
         Collections.shuffle(fileNames, new Random(0L));
         for (String fileName : fileNames) {
             ImageProcessor imageProcessor = Tools.loadImageProcessor(fileName);
@@ -131,8 +132,7 @@ public class DofChecker
         boolean useDBSCAN = true;
 
         ImageProcessor regionsImage = new ColorProcessor(resized.getWidth(), resized.getHeight());
-        List colorRegions;
-        List colorRegions;
+        List<ColorRegion> colorRegions;
         if (useDBSCAN) {
             ColorDBSCAN_lab colorDbscan = new ColorDBSCAN_lab();
             colorDbscan.setDeltaEToBeSimilar(deltaE);

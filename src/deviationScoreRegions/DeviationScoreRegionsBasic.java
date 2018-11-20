@@ -101,10 +101,10 @@ public class DeviationScoreRegionsBasic extends Dbscan implements Batchable {
                 break;
             }
 
-            Iterator i$ = cluster.iterator();
+            Iterator it = cluster.iterator();
 
-            while(i$.hasNext()) {
-                Point p = (Point)i$.next();
+            while(it.hasNext()) {
+                Point p = (Point)it.next();
                 colorRegions = this.range(p, this.epsilon);
                 if (colorRegions.size() >= this.minPts) {
                     this.mask.fillPolygon(ConvexHullTools.get(colorRegions));
@@ -137,10 +137,10 @@ public class DeviationScoreRegionsBasic extends Dbscan implements Batchable {
             changesmade = false;
             ++iteration;
             int DEBUGCOUNT = colorRegions.size();
-            Iterator i$ = colorRegions.iterator();
+            Iterator it = colorRegions.iterator();
 
-            while(i$.hasNext()) {
-                ColorRegion colorRegion = (ColorRegion)i$.next();
+            while(it.hasNext()) {
+                ColorRegion colorRegion = (ColorRegion)it.next();
                 if (colorRegion.size() > 0) {
                     ColorRegion outline = new ColorRegion(ColorRegionTools.getOutline(colorRegion, 1, width, height));
                     double maskBoundaryOverlap = ColorRegionTools.overlap(outline, this.mask);

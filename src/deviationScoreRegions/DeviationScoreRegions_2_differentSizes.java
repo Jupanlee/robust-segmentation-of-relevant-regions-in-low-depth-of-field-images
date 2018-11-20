@@ -188,27 +188,25 @@ public class DeviationScoreRegions_2_differentSizes implements Batchable {
             this.progressListener.progressUpdate(0.5D, "Mask Approximation");
         }
 
-        Iterator i$ = clusters.iterator();
-
+        Iterator it = clusters.iterator();
         List colorRegions;
-        Iterator it;
         while(it.hasNext()) {
-            colorRegions = (List)i$.next();
+            colorRegions = (List)it.next();
             if ((double)colorRegions.size() / (double)((List)clusters.get(0)).size() < this.mainClusterSize) {
                 break;
             }
 
             int eps = (int)Math.round(breite * this.convexHullLinkingEpsilonPercentage);
-            i$ = colorRegions.iterator();
+            Iterator it1 = colorRegions.iterator();
 
-            while(i$.hasNext()) {
-                Point p = (Point)i$.next();
-                List<Point> rangePoints = scoreDbscan.range(p, eps);
+            while(it1.hasNext()) {
+                Point p1 = (Point)it1.next();
+                List<Point> rangePoints = scoreDbscan.range(p1, eps);
                 if (rangePoints.size() >= minPts) {
                     if (this.convexHullLinking) {
                         this.mask.fillPolygon(ConvexHullTools.get(rangePoints));
                     } else {
-                        this.mask.fillOval(p.x, p.y, eps, eps);
+                        this.mask.fillOval(p1.x, p1.y, eps, eps);
                     }
                 }
             }
@@ -257,12 +255,12 @@ public class DeviationScoreRegions_2_differentSizes implements Batchable {
         }
 
         ColorRegion[][] colorRegionMap = new ColorRegion[this.mask.getWidth()][this.mask.getHeight()];
-        i$ = colorRegions.iterator();
+        Iterator it2 = colorRegions.iterator();
 
-        while(i$.hasNext()) {
-            ColorRegion colorRegion = (ColorRegion)i$.next();
+        while(it2.hasNext()) {
+            ColorRegion colorRegion = (ColorRegion)it2.next();
 
-            Point p;
+            Point p2;
             for(Iterator i$ = colorRegion.getPixels().iterator(); i$.hasNext(); colorRegionMap[p.x][p.y] = colorRegion) {
                 p = (Point)i$.next();
             }

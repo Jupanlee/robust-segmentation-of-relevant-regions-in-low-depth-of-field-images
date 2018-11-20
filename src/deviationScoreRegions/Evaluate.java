@@ -63,26 +63,26 @@ public class Evaluate extends MThread {
         String description = "testFuyyzParameters";
         int size = 300;
         int count = 0;
-        int[] arr$ = new int[]{14, 15, 16, 17, 18};
-        int len$ = arr$.length;
+        int[] arr1 = new int[]{14, 15, 16, 17, 18};
+        int len1 = arr1.length;
 
-        for(int i$ = 0; i$ < len$; ++i$) {
-            int spatial = arr$[i$];
-            float[] arr$ = new float[]{0.2F, 0.16666667F, 0.14285715F, 0.125F, 0.11111111F};
-            int len$ = arr$.length;
+        for(int i = 0; i < len1; ++i) {
+            int spatial = arr1[i];
+            float[] arr2 = new float[]{0.2F, 0.16666667F, 0.14285715F, 0.125F, 0.11111111F};
+            int len2 = arr2.length;
 
-            for(int i$ = 0; i$ < len$; ++i$) {
-                float threshold = arr$[i$];
-                int[] arr$ = new int[]{16, 17, 18, 19, 20};
-                int len$ = arr$.length;
+            for(int j = 0; j < len2; ++j) {
+                float threshold = arr2[j];
+                int[] arr3 = new int[]{16, 17, 18, 19, 20};
+                int len3 = arr3.length;
 
-                for(int i$ = 0; i$ < len$; ++i$) {
-                    int range = arr$[i$];
-                    int[] arr$ = new int[]{60, 70, 75, 80, 85, 90};
-                    int len$ = arr$.length;
+                for(int k = 0; k < len3; ++k) {
+                    int range = arr3[k];
+                    int[] arr4 = new int[]{60, 70, 75, 80, 85, 90};
+                    int len4 = arr4.length;
 
-                    for(int i$ = 0; i$ < len$; ++i$) {
-                        int minsize = arr$[i$];
+                    for(int t = 0; t < len4; ++t) {
+                        int minsize = arr4[t];
                         ++count;
                         FuzzySegmentationBatch.parameters = new Parameters(threshold, spatial, range, minsize);
                         (new Evaluate(description, new FuzzySegmentationBatch(), folder, size, "./results_" + description + count + ".txt")).start();

@@ -55,7 +55,7 @@ public class FlickrImagesWithIterator
             return new FlickrIterator(sp, this.maxPhotoCount);
         } catch (Exception ex) {
             Logger.getLogger(FlickrImagesWithIterator.class.getName()).log(Level.SEVERE, null, ex);
-        }throw new IllegalStateException(ex);
+        }throw new IllegalStateException();
     }
 
     public static void main(String[] args) throws Exception

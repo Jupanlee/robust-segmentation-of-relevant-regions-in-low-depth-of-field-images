@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
-public class MSet<Item extends MItem> extends MQueue<Item>
-        implements Set<Item>, List<Item>
+public class MSet<MItem> extends MQueue<MItem>
+        implements Set<MItem>, List<MItem>
 {
     public final int MAX_ID_SIZE = 150000000;
     private boolean[] objectIDs;
@@ -23,7 +23,7 @@ public class MSet<Item extends MItem> extends MQueue<Item>
     public boolean add(Item item)
     {
         int id = item.getID();
-        if (this.objectIDs[id] != 0) return true;
+        if (this.objectIDs[id] != false) return true;
 
         this.objectIDs[id] = true;
         return super.add(item);
@@ -35,7 +35,7 @@ public class MSet<Item extends MItem> extends MQueue<Item>
         this.objectIDs = new boolean[150000000];
     }
 
-    public Item removeFirst()
+    public MItem removeFirst()
     {
         MItem item = (MItem)super.removeFirst();
         this.objectIDs[item.getID()] = false;

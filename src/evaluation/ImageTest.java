@@ -33,7 +33,7 @@ public abstract class ImageTest
                 Segment sC = this.segEvaluate.getSegment(x, y);
                 Segment sH = this.segReference.getSegment(x, y);
 
-                switch (1.$SwitchMap$evaluation$ImageTest$Method[m.ordinal()]) {
+                switch (m.ordinal()) {
                 case 1:
                     if ((sC == Segment.background) || (sH == Segment.background)) continue;
                     count++; break;

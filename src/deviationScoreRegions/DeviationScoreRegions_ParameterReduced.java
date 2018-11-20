@@ -146,16 +146,16 @@ public class DeviationScoreRegions_ParameterReduced implements Batchable {
                 break;
             }
 
-            Iterator i$ = colorRegions.iterator();
+            Iterator it1 = colorRegions.iterator();
 
-            while(i$.hasNext()) {
-                Point p = (Point)i$.next();
-                List<Point> rangePoints = scoreDbscan.range(p, epsilon);
+            while(it1.hasNext()) {
+                Point p1 = (Point)it1.next();
+                List<Point> rangePoints = scoreDbscan.range(p1, epsilon);
                 if (rangePoints.size() >= minPts) {
                     if (this.convexHullLinking) {
                         this.mask.fillPolygon(ConvexHullTools.get(rangePoints));
                     } else {
-                        this.mask.fillOval(p.x - epsilon / 2, p.y - epsilon / 2, epsilon, epsilon);
+                        this.mask.fillOval(p1.x - epsilon / 2, p1.y - epsilon / 2, epsilon, epsilon);
                     }
                 }
             }
@@ -192,14 +192,14 @@ public class DeviationScoreRegions_ParameterReduced implements Batchable {
         }
 
         ColorRegion[][] colorRegionMap = new ColorRegion[this.mask.getWidth()][this.mask.getHeight()];
-        Iterator i$ = colorRegions.iterator();
+        Iterator it2 = colorRegions.iterator();
 
-        while(i$.hasNext()) {
-            ColorRegion colorRegion = (ColorRegion)i$.next();
+        while(it2.hasNext()) {
+            ColorRegion colorRegion = (ColorRegion)it2.next();
 
-            Point p;
-            for(Iterator i$ = colorRegion.getPixels().iterator(); i$.hasNext(); colorRegionMap[p.x][p.y] = colorRegion) {
-                p = (Point)i$.next();
+            Point p2;
+            for(Iterator it3 = colorRegion.getPixels().iterator(); it3.hasNext(); colorRegionMap[p.x][p.y] = colorRegion) {
+                p2= (Point)it3.next();
             }
         }
 
@@ -223,10 +223,10 @@ public class DeviationScoreRegions_ParameterReduced implements Batchable {
             }
 
             if (clearRegion) {
-                Iterator i$ = colorRegion.getOutline().iterator();
+                Iterator it3 = colorRegion.getOutline().iterator();
 
-                while(i$.hasNext()) {
-                    Point outlinePoint = (Point)i$.next();
+                while(it3.hasNext()) {
+                    Point outlinePoint = (Point)it3.next();
                     nextSeedRegions.add(colorRegionMap[outlinePoint.x][outlinePoint.y]);
                 }
 

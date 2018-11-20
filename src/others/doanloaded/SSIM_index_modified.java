@@ -147,7 +147,7 @@ public class SSIM_index_modified
                 window_weights[pointer] = (float)array_gauss_window[pointer];
             }
         } else {
-            for (pointer = 0; pointer < filter_length; pointer++) {
+            for (int pointer = 0; pointer < filter_length; pointer++) {
                 array_gauss_window[pointer] = (1.0D / filter_length);
                 window_weights[pointer] = (float)array_gauss_window[pointer];
             }
@@ -209,7 +209,7 @@ public class SSIM_index_modified
         double[] mu2_sq = new double[image_dimension];
         double[] mu1_mu2 = new double[image_dimension];
 
-        for (pointer = 0; pointer < image_dimension; pointer++) {
+        for (int pointer = 0; pointer < image_dimension; pointer++) {
             array_mu1_ip[pointer] *= array_mu1_ip[pointer];
             array_mu2_ip[pointer] *= array_mu2_ip[pointer];
             array_mu1_ip[pointer] *= array_mu2_ip[pointer];
@@ -219,7 +219,7 @@ public class SSIM_index_modified
         double[] sigma2_sq = new double[image_dimension];
         double[] sigma12 = new double[image_dimension];
 
-        for (pointer = 0; pointer < image_dimension; pointer++)
+        for (int pointer = 0; pointer < image_dimension; pointer++)
         {
             array_mu1_ip_copy[pointer] *= array_mu1_ip_copy[pointer];
             array_mu2_ip_copy[pointer] *= array_mu2_ip_copy[pointer];
@@ -233,7 +233,7 @@ public class SSIM_index_modified
         float[] array_soporte_2 = (float[])(float[])soporte_2_ip.getPixels();
         float[] array_soporte_3 = (float[])(float[])soporte_3_ip.getPixels();
 
-        for (pointer = 0; pointer < image_dimension; pointer++) {
+        for (int pointer = 0; pointer < image_dimension; pointer++) {
             array_soporte_1[pointer] = (float)sigma1_sq[pointer];
             array_soporte_2[pointer] = (float)sigma2_sq[pointer];
             array_soporte_3[pointer] = (float)sigma12[pointer];
@@ -242,14 +242,14 @@ public class SSIM_index_modified
         soporte_2_ip.convolve(window_weights, filter_width, filter_width);
         soporte_3_ip.convolve(window_weights, filter_width, filter_width);
 
-        for (pointer = 0; pointer < image_dimension; pointer++) {
+        for (int pointer = 0; pointer < image_dimension; pointer++) {
             array_soporte_1[pointer] -= mu1_sq[pointer];
             array_soporte_2[pointer] -= mu2_sq[pointer];
             array_soporte_3[pointer] -= mu1_mu2[pointer];
         }
         double[] ssim_map = new double[image_dimension];
         double suma = 0.0D;
-        for (pointer = 0; pointer < image_dimension; pointer++) {
+        for (int pointer = 0; pointer < image_dimension; pointer++) {
             ssim_map[pointer] = ((2.0D * mu1_mu2[pointer] + C1) * (2.0D * sigma12[pointer] + C2) / ((mu1_sq[pointer] + mu2_sq[pointer] + C1) * (sigma1_sq[pointer] + sigma2_sq[pointer] + C2)));
             suma += ssim_map[pointer];
         }

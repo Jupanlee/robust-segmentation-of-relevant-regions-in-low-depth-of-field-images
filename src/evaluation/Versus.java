@@ -52,7 +52,7 @@ public class Versus
             throws IOException, Exception
     {
         int counter = 0;
-        List files = Tools.getFilesFromDirectory("../../images/tmp", ".jpg");
+        List<String> files = Tools.getFilesFromDirectory("../../images/tmp", ".jpg");
 
         for (String fileName : files) {
             counter++;

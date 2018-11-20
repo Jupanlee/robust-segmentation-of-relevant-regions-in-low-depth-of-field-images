@@ -32,8 +32,7 @@ public class ColorScoreGrowingNewTry
 
         boolean useDBSCAN = false;
         int deltaE = 10;
-        List colorRegions;
-        List colorRegions;
+        List<ColorRegion> colorRegions;
         if (useDBSCAN) {
             ColorDBSCAN_lab colorDbscan = new ColorDBSCAN_lab();
             colorDbscan.setDeltaEToBeSimilar(2147483647.0D);
@@ -54,9 +53,9 @@ public class ColorScoreGrowingNewTry
             double value = shift + score / maxScore;
 
             double power = 1.0D;
-            valuePower = Math.pow(value, power);
+            double valuePower = Math.pow(value, power);
 
-            max = Math.pow(1.0D + shift, power);
+            double max = Math.pow(1.0D + shift, power);
 
             for (Point p : colorRegion.getPixels())
                 mask.putPixelValue(p.x, p.y, valuePower / max * 255.0D);

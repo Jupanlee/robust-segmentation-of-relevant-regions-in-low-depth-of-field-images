@@ -179,7 +179,7 @@ public class SimilarityCheck
     }
 
     public static void generateMasks(String folder, int size) throws IOException {
-        List fileNames = Tools.getAllFilesFromDirectoryWithSubfolders(folder, new String[] { ".jpg", ".png" });
+        List<String> fileNames = Tools.getAllFilesFromDirectoryWithSubfolders(folder, new String[] { ".jpg", ".png" });
         int count = fileNames.size();
         for (String fileName : fileNames) {
             System.out.println(count-- + " " + fileName);

@@ -178,8 +178,8 @@ public class DeviationScoreRegions_Tuned2 implements Batchable {
         double scorePointDensity = 0.0D;
 
         Point p;
-        for(Iterator i$ = scorePoints.iterator(); i$.hasNext(); scorePointDensity += Math.min((double)scoreImage.getPixelValue(p.x, p.y) / this.scoreClusteringThreshold, 1.0D)) {
-            p = (Point)i$.next();
+        for(Iterator it = scorePoints.iterator(); it.hasNext(); scorePointDensity += Math.min((double)scoreImage.getPixelValue(p.x, p.y) / this.scoreClusteringThreshold, 1.0D)) {
+            p = (Point)it.next();
         }
 
         scorePointDensity /= (double)scoreImage.getPixelCount();
@@ -199,19 +199,19 @@ public class DeviationScoreRegions_Tuned2 implements Batchable {
             this.progressListener.progressUpdate(0.5D, "Mask Approximation");
         }
 
-        Iterator i$ = clusters.iterator();
+        Iterator it = clusters.iterator();
 
-        while(i$.hasNext()) {
-            List<Point> cluster = (List)i$.next();
+        while(it.hasNext()) {
+            List<Point> cluster = (List)it.next();
             if ((double)cluster.size() / (double)((List)clusters.get(0)).size() < this.mainClusterSize) {
                 break;
             }
 
-            Iterator i$ = cluster.iterator();
+            Iterator it1 = cluster.iterator();
 
-            while(i$.hasNext()) {
-                Point p = (Point)i$.next();
-                List<Point> rangePoints = scoreDbscan.range(p, (int)Math.round(breite * this.convexHullLinkingEpsilonPercentage));
+            while(it1.hasNext()) {
+                Point p1 = (Point)it.next();
+                List<Point> rangePoints = scoreDbscan.range(p1, (int)Math.round(breite * this.convexHullLinkingEpsilonPercentage));
                 if (rangePoints.size() >= minPts) {
                     this.mask.fillPolygon(ConvexHullTools.get(rangePoints));
                 }
@@ -259,9 +259,9 @@ public class DeviationScoreRegions_Tuned2 implements Batchable {
         while(i$.hasNext()) {
             ColorRegion colorRegion = (ColorRegion)i$.next();
 
-            Point p;
-            for(Iterator i$ = colorRegion.getPixels().iterator(); i$.hasNext(); colorRegionMap[p.x][p.y] = colorRegion) {
-                p = (Point)i$.next();
+            Point p1;
+            for(Iterator it1 = colorRegion.getPixels().iterator(); it1.hasNext(); colorRegionMap[p.x][p.y] = colorRegion) {
+                p = (Point)it1.next();
             }
         }
 
@@ -279,10 +279,10 @@ public class DeviationScoreRegions_Tuned2 implements Batchable {
             double maskRelevancy = maskBoundaryOverlap * scoreBoundaryOverlap;
             boolean clearRegion = maskBoundaryOverlap <= this.relevancyStart - (double)iteration * this.relevancyIterationDec && maskRelevancy <= this.minMaskRelevancy - (double)iteration * this.relevancyIterationDec && colorRegion.size() <= maxSize;
             if (clearRegion) {
-                Iterator i$ = colorRegion.getOutline().iterator();
+                Iterator it2 = colorRegion.getOutline().iterator();
 
-                while(i$.hasNext()) {
-                    Point outlinePoint = (Point)i$.next();
+                while(it2.hasNext()) {
+                    Point outlinePoint = (Point)it2.next();
                     nextSeedRegions.add(colorRegionMap[outlinePoint.x][outlinePoint.y]);
                 }
 

@@ -65,7 +65,8 @@ public class SimilarityCheckTMP
 
     private static void test(ImageDistance dist, String folder) throws IOException {
         List processedFiles = new LinkedList();
-        for (Iterator i$ = Tools.getAllFilesFromDirectoryWithSubfolders(folder, "").iterator(); i$.hasNext(); ) { fileNameA = (String)i$.next();
+        for (Iterator i$ = Tools.getAllFilesFromDirectoryWithSubfolders(folder, "").iterator(); i$.hasNext(); ) {
+            String fileNameA = (String)i$.next();
             if (isImage(fileNameA))
             {
                 processedFiles.add(fileNameA);
@@ -109,7 +110,7 @@ public class SimilarityCheckTMP
         boolean[][] roi = new boolean[mask.getWidth()][mask.getHeight()];
         for (int x = 0; x < roi.length; x++) {
             for (int y = 0; y < roi[x].length; y++) {
-                roi[x][y] = (mask.getPixel(x, y) >= 1 ? 1 : 0);
+                roi[x][y] = (mask.getPixel(x, y) >= 1 ? true : false);
             }
         }
         return roi;

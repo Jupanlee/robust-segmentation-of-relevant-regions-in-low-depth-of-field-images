@@ -73,15 +73,17 @@ public class ColorHistrogramSimilarity
         int bins = 128;
         int size = 400;
 
-        for (Iterator i$ = Tools.getAllFilesFromDirectoryWithSubfolders("data/similarity", ".jpg").iterator(); i$.hasNext(); ) { referenceFileName = (String)i$.next();
+        for (Iterator i$ = Tools.getAllFilesFromDirectoryWithSubfolders("data/similarity", ".jpg").iterator(); i$.hasNext(); )
+        {
+            String referenceFileName = (String)i$.next();
 
             Vector similarToReference = new Vector();
             ImageProcessor reference = Tools.resize(Tools.loadImageProcessor(referenceFileName), size);
             ImageProcessor referencewithDofExtraction = null;
             Tools.showImage("window1", reference, referenceFileName);
 
-            histogramReference = getColorHistogram(reference, bins);
-            histogramReferenceWithDofExtraction = getColorHistogram(referencewithDofExtraction, bins);
+            int[] histogramReference = getColorHistogram(reference, bins);
+            int[] histogramReferenceWithDofExtraction = getColorHistogram(referencewithDofExtraction, bins);
 
             for (String compareToFileName : Tools.getAllFilesFromDirectoryWithSubfolders("data/similarity", ".jpg"))
                 if (!compareToFileName.equals(referenceFileName)) {

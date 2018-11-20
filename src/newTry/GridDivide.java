@@ -2,6 +2,7 @@ package newTry;
 
 import basics.Tools;
 import deviationScoreRegions.modular.edgeFilters.MeanLabNeighborDistance;
+import evaluation.Batch;
 import evaluation.Batch.Batchable;
 import ij.process.ByteProcessor;
 import ij.process.ImageProcessor;

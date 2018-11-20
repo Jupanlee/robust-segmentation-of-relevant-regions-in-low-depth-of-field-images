@@ -39,10 +39,10 @@ public class ScoreRegions {
             Collection<Point> cluster = (List)i$.next();
             ScoreRegion region = new ScoreRegion(this);
             this.regionsList.add(region);
-            Iterator i$ = cluster.iterator();
+            Iterator it = cluster.iterator();
 
-            while(i$.hasNext()) {
-                Point p = (Point)i$.next();
+            while(it.hasNext()) {
+                Point p = (Point)it.next();
                 region.addPoint(p);
             }
         }
@@ -97,11 +97,11 @@ public class ScoreRegions {
 
         double maxFoundOverlapCount = -1.0D;
         outlineOverlapRegion = null;
-        Iterator i$ = overlaps.keySet().iterator();
+        Iterator it = overlaps.keySet().iterator();
 
-        while(i$.hasNext()) {
-            ScoreRegion overlapRegion = (ScoreRegion)i$.next();
-            int overlapCount = (Integer)overlaps.get(overlapRegion);
+        while(it.hasNext()) {
+            ScoreRegion overlapRegion = (ScoreRegion)it.next();
+            int overlapCount = overlaps.get(overlapRegion);
             if ((double)overlapCount > maxFoundOverlapCount && !overlapRegion.doneWith && overlapRegion.size() >= minChildSize && overlapRegion.size() <= maxChildSize) {
                 maxFoundOverlapCount = (double)overlapCount;
                 outlineOverlapRegion = overlapRegion;
