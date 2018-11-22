@@ -32,7 +32,7 @@ public class FlatRegions
 
         for (int x = 0; x < width; x++)
             for (int y = 0; y < height; y++) {
-                if (visited[x][y] != 0) {
+                if (visited[x][y] != false) {
                     continue;
                 }
                 int currentRegionPixelValue = pixels[x][y];
@@ -50,9 +50,9 @@ public class FlatRegions
                     {
                         int pixelValue = pixels[point.x][point.y];
 
-                        if ((visited[point.x][point.y] == 0) && (pixelValue == currentRegionPixelValue))
+                        if ((visited[point.x][point.y] == false) && (pixelValue == currentRegionPixelValue))
                         {
-                            visited[point.x][point.y] = 1;
+                            visited[point.x][point.y] = true;
 
                             currentRegion.addPointToRegion(point.x, point.y);
 

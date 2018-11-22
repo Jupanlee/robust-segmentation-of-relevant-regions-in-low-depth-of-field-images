@@ -37,10 +37,10 @@ class NearestNeighborList<T>
         return this.m_Queue.size() >= this.m_Capacity;
     }
 
-    public T getHighest() {
-        NeighborEntry p = (NeighborEntry)this.m_Queue.peek();
-        return p == null ? null : p.data;
-    }
+//    public T getHighest() {
+//        NeighborEntry p = this.m_Queue.peek();
+//        return p == null ? null : p.data;
+//    }
 
     public boolean isEmpty() {
         return this.m_Queue.size() == 0;
@@ -50,11 +50,11 @@ class NearestNeighborList<T>
         return this.m_Queue.size();
     }
 
-    public T removeHighest()
-    {
-        NeighborEntry p = (NeighborEntry)this.m_Queue.poll();
-        return p == null ? null : p.data;
-    }
+//    public T removeHighest()
+//    {
+//        NeighborEntry p = this.m_Queue.poll();
+//        return p == null ? null : p.data;
+//    }
 
     static class NeighborEntry<T>
             implements Comparable<NeighborEntry<T>>

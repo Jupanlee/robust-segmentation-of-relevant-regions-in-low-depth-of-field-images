@@ -1143,7 +1143,7 @@ public class Tools {
         List<K> keys = new ArrayList(size);
 
         for(int i = 0; i < size; ++i) {
-            keys.set(i, ((Entry)list.get(i)).getKey());
+            keys.set(i, (list.get(i)).getKey());
         }
 
         return keys;
@@ -1317,7 +1317,7 @@ public class Tools {
 
         double diff;
         for(Iterator i$ = numbers.iterator(); i$.hasNext(); sum += diff * diff) {
-            Nr v = (Number)i$.next();
+            Nr v = (Nr)i$.next();
             diff = v.doubleValue() - mean;
         }
 

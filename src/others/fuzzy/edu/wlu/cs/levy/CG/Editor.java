@@ -9,7 +9,7 @@ public abstract interface Editor<T>
     {
         public Replacer(T val)
         {
-            super();
+            super(val);
         }
         public T edit(T current) {
             return this.val;
@@ -20,7 +20,7 @@ public abstract interface Editor<T>
     {
         public OptionalInserter(T val)
         {
-            super();
+            super(val);
         }
         public T edit(T current) {
             return current == null ? this.val : current;
@@ -31,7 +31,7 @@ public abstract interface Editor<T>
     {
         public Inserter(T val)
         {
-            super();
+            super(val);
         }
         public T edit(T current) throws KeyDuplicateException {
             if (current == null) {

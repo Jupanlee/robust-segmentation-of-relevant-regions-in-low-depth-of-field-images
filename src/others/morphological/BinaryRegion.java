@@ -109,9 +109,8 @@ public class BinaryRegion
     {
         BinaryRegion smallerRegion;
         BinaryRegion largerRegion;
-        BinaryRegion smallerRegion;
         if (pixelRegion.getPixelCount() > getPixelCount()) {
-            BinaryRegion largerRegion = pixelRegion;
+            largerRegion = pixelRegion;
             smallerRegion = this;
         } else {
             largerRegion = this;

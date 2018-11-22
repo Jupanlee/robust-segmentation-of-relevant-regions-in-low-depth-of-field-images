@@ -2,13 +2,12 @@ package evaluation.similarity;
 
 import basics.Tools;
 import basics.javaAddons.DEBUG;
-import deviationScoreRegions.DeviationScoreRegions_ParameterReduced;
+import deviationScoreRegions.DeviationScoreRegions_Test;
 import evaluation.similarity.similarity.distances.MinkowskiFormDistance;
 import ij.process.ColorProcessor;
 import ij.process.ImageProcessor;
 import java.awt.Color;
 import java.io.IOException;
-import java.io.PrintStream;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
@@ -184,7 +183,7 @@ public class SimilarityCheck
         for (String fileName : fileNames) {
             System.out.println(count-- + " " + fileName);
             ImageProcessor original = Tools.loadImageProcessor(fileName, size);
-            new DeviationScoreRegions_ParameterReduced().run(original);
+            new DeviationScoreRegions_Test().run(original);
             ImageProcessor mask = original.getMask();
             Tools.save(mask, "/tmp/weiler_tmp/dsrMasks/" + Tools.getNameWithoutExtension(fileName) + ".png");
         }

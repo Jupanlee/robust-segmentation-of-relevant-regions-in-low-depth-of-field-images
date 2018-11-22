@@ -19,25 +19,25 @@ public class ToolsPhilipp
 
     public static ExecutorService exec = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
-    public static Iterable<String> getAllFilesInDir(String dirName, String fileType)
-    {
-        FileFilter ff = new FileFilter(fileType)
-        {
-            public boolean accept(File pathname)
-            {
-                return (pathname.toString().endsWith(this.val$fileType)) && (!pathname.toString().endsWith(".db")) && (!pathname.isDirectory());
-            }
-        };
-        File f = new File(dirName);
-        File[] files = f.listFiles(ff);
-
-        List fileStringList = new ArrayList();
-        for (File file : files) {
-            fileStringList.add(file.getName());
-        }
-
-        return fileStringList;
-    }
+//    public static Iterable<String> getAllFilesInDir(String dirName, String fileType)
+//    {
+//        FileFilter ff = new FileFilter(fileType)
+//        {
+//            public boolean accept(File pathname)
+//            {
+//                return (pathname.toString().endsWith(fileType)) && (!pathname.toString().endsWith(".db")) && (!pathname.isDirectory());
+//            }
+//        };
+//        File f = new File(dirName);
+//        File[] files = f.listFiles(ff);
+//
+//        List fileStringList = new ArrayList();
+//        for (File file : files) {
+//            fileStringList.add(file.getName());
+//        }
+//
+//        return fileStringList;
+//    }
 
     public static Iterable<String> getAllSubdirs(String dirName)
     {
@@ -100,7 +100,7 @@ public class ToolsPhilipp
         for (int x = 0; x < roiMap.length; x++) {
             for (int y = 0; y < roiMap[0].length; y++) {
                 if (mapIp.getPixelValue(x, y) == 0.0F) {
-                    roiMap[x][y] = 1;
+                    roiMap[x][y] = true;
                     mapIp.set(x, y, 0);
                 }
                 else if (mapIp.getPixelValue(x, y) < 255.0F) {
