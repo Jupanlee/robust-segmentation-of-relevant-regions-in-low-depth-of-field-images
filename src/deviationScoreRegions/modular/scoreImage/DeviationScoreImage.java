@@ -62,7 +62,7 @@ public class DeviationScoreImage extends ScoreImage
         ImageProcessor[] edges = getEdges(original);
         this.scoreImageProcessor = (this.iterations > 1 ? Statistics.standardDeviation(edges) : edges[0].duplicate().convertToByte(true));
 
-        this.scoreImageProcessor = smooth(this.scoreImageProcessor, 0.2D);
+//        this.scoreImageProcessor = smooth(this.scoreImageProcessor, 0.2D);
         this.scoreImageProcessor.sqr();
         return this.scoreImageProcessor;
     }

@@ -20,6 +20,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
@@ -228,6 +230,7 @@ public class WebStartGUI extends JFrame implements Runnable, ProgressListener {
     }
 
     public void run() {
+
         this.debugImages.clear();
         DEBUG.setVerbose(false);
         this.setEnabled(false);
@@ -235,9 +238,39 @@ public class WebStartGUI extends JFrame implements Runnable, ProgressListener {
         this.jProgressBar1.setString("Segmentation running...");
         this.jProgressBar1.setIndeterminate(true);
         this.jProgressBar1.setVisible(true);
-        int size = Integer.parseInt(this.tfSize.getText());
+//        int size = Integer.parseInt(this.tfSize.getText());
+        int size = 600;
         if (this.method == WebStartGUI.Method.our && this.ourResult == null) {
-            this.ourResult = (new DSR_Modular(this)).run(Tools.resize(this.imageProcessor, size));
+//            File[]  files = new File("C:\\Users\\jupan\\Desktop\\2011-Graf-Program\\dataset").listFiles();
+//            File[] files = new File("C:\\Users\\jupan\\Desktop\\2011-Graf-Program\\dataset\\THU-LJP-lowDOF\\msra\\test\\image").listFiles();
+            File[] files = new File("C:\\Users\\jupan\\Desktop\\2011-Graf-Program\\dataset\\THU-LJP-lowDOF\\msra\\train\\image").listFiles();
+//            String saliencyMapDir = "C:\\Users\\jupan\\Desktop\\2011-Graf-Program\\saliencyMap\\data-flickr\\";
+            String saliencyMapDir = "C:\\Users\\jupan\\Desktop\\2011-Graf-Program\\saliencyMap\\msra-train\\";
+            FileWriter runTimeFile;
+
+            for (int i = 0; i < files.length; ++i) {
+                File file = files[i];
+                String fileName = file.getName();
+                String fileNameWithoutSuffix = fileName.substring(0, fileName.lastIndexOf("."));
+                try {
+                    this.imageProcessor = Tools.loadImageProcessor(file.toString());
+                }catch (IOException e){
+                    System.out.println("Error in : " + file.toString());
+                }
+                long startTime = System.currentTimeMillis();
+                this.ourResult = (new DSR_Modular(this)).run(Tools.resize(this.imageProcessor, size));
+                long endTime = System.currentTimeMillis();
+                try{
+                    runTimeFile = new FileWriter("C:\\Users\\jupan\\Desktop\\2011-Graf-Program\\saliencyMap\\run_time_file.txt");
+                    runTimeFile.write(file.toString()+" "+(endTime-startTime));
+                }catch (IOException e){
+                    System.out.println("Error in run_time_file.txt");
+                }
+
+                String mapName = saliencyMapDir + fileNameWithoutSuffix +".png";
+                Tools.save(this.ourResult, mapName);
+            }
+//            this.ourResult = (new DSR_Modular(this)).run(Tools.resize(this.imageProcessor, size));
         }
 
         if (this.method == WebStartGUI.Method.morph && this.morphologicalResult == null) {

@@ -52,17 +52,18 @@ public class DSR_Modular implements Batchable {
         this.scoreImage.generateScore(original);
         this.progressListener.updateImage(this.scoreImage.getImageProcessor());
         this.progressListener.progressUpdate(0.1D, "Score Clustering");
-        this.scoreImage.maxSize(this.maxSize);
-        ScoreClustering scoreClustering = new ScoreClustering(this.scoreImage);
-        this.progressListener.progressUpdate(0.2D, "Mask Approximation");
-        ApproximationMask approximationMask = new ApproximationMask(scoreClustering, this.progressListener);
-        this.progressListener.updateImage(approximationMask.getImageProcessor());
-        this.progressListener.progressUpdate(0.5D, "Region Scoring");
-        ImageProcessor mask = (new ScoreRegions(this.dist, this.rel, this.progressListener)).removeLowScoreRegions(original, approximationMask);
-        this.progressListener.updateImage(mask);
-        this.progressListener.progressUpdate(0.1D, "Done.");
-        original.setMask(mask.resize(original.getWidth(), original.getHeight()));
-        return Tools.maskBackground(original, Color.blue);
+//        this.scoreImage.maxSize(this.maxSize);
+//        ScoreClustering scoreClustering = new ScoreClustering(this.scoreImage);
+//        this.progressListener.progressUpdate(0.2D, "Mask Approximation");
+//        ApproximationMask approximationMask = new ApproximationMask(scoreClustering, this.progressListener);
+//        this.progressListener.updateImage(approximationMask.getImageProcessor());
+//        this.progressListener.progressUpdate(0.5D, "Region Scoring");
+//        ImageProcessor mask = (new ScoreRegions(this.dist, this.rel, this.progressListener)).removeLowScoreRegions(original, approximationMask);
+//        this.progressListener.updateImage(mask);
+//        this.progressListener.progressUpdate(0.1D, "Done.");
+//        original.setMask(mask.resize(original.getWidth(), original.getHeight()));
+//        return Tools.maskBackground(original, Color.blue);
+        return this.scoreImage.getImageProcessor();
     }
 
     public static void main(String[] args) throws IOException, ParserConfigurationException {
