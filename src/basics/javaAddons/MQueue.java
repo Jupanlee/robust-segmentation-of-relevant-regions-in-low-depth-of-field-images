@@ -11,14 +11,14 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-public class MQueue<MItem> implements List<MItem>, Iterable<MItem> {
-    private MItem[] items = null;
+public class MQueue<Item> implements List<Item>, Iterable<Item> {
+    private Object[] items = null;
     private int indexOfFirstElement = 0;
     private int indexOfLastElement = -1;
     private int size = 0;
 
     private void init(int maxSize) {
-//        this.items = new MItem[maxSize];
+        this.items = new Object[maxSize];
     }
 
     public MQueue(int maxSize) {
@@ -35,19 +35,19 @@ public class MQueue<MItem> implements List<MItem>, Iterable<MItem> {
         return this.size == 0;
     }
 
-    public MItem getFirst() {
-        return this.items[this.indexOfFirstElement];
+    public Item getFirst() {
+        return (Item)this.items[this.indexOfFirstElement];
     }
 
-    public MItem get(int index) {
-        return this.items[this.indexOfFirstElement + index];
+    public Item get(int index) {
+        return (Item)this.items[this.indexOfFirstElement + index];
     }
 
     public Object[] toArray() {
         return Arrays.copyOfRange(this.items, this.indexOfFirstElement, this.indexOfLastElement + 1);
     }
 
-    public MItem getLast() {
+    public Item getLast() {
         return this.get(this.size - 1);
     }
 
@@ -55,22 +55,22 @@ public class MQueue<MItem> implements List<MItem>, Iterable<MItem> {
         return this.size;
     }
 
-    public boolean addAll(Collection<? extends MItem> collection) {
-        Iterator<? extends  MItem> it = collection.iterator();
+    public boolean addAll(Collection<? extends Item> collection) {
+        Iterator i$ = collection.iterator();
 
-        MItem item;
+        Object item;
         do {
-            if (!it.hasNext()) {
+            if (!i$.hasNext()) {
                 return true;
             }
 
-            item = it.next();
-        } while(this.add(item));
+            item = i$.next();
+        } while(this.add((Item)item));
 
         return false;
     }
 
-    public boolean add(MItem item) {
+    public boolean add(Item item) {
         if (this.size == this.items.length) {
             return false;
         } else {
@@ -81,21 +81,21 @@ public class MQueue<MItem> implements List<MItem>, Iterable<MItem> {
         }
     }
 
-    public MItem set(int index, MItem element) {
-        MItem last = this.items[this.indexOfFirstElement + index];
+    public Item set(int index, Item element) {
+        Item last = (Item)this.items[this.indexOfFirstElement + index];
         this.items[this.indexOfFirstElement + index] = element;
         return last;
     }
 
-    public MItem removeFirst() {
-        MItem item = this.getFirst();
+    public Item removeFirst() {
+        Item item = this.getFirst();
         this.items[this.indexOfFirstElement] = null;
         this.indexOfFirstElement = (this.indexOfFirstElement + 1) % this.items.length;
         --this.size;
         return item;
     }
 
-    public MItem remove(int index) {
+    public Item remove(int index) {
         if (index == 0) {
             return this.removeFirst();
         } else {
@@ -103,7 +103,7 @@ public class MQueue<MItem> implements List<MItem>, Iterable<MItem> {
         }
     }
 
-    public Iterator<MItem> iterator() {
+    public Iterator<Item> iterator() {
         return new MQueue.MQueueIterator(this);
     }
 
@@ -133,7 +133,7 @@ public class MQueue<MItem> implements List<MItem>, Iterable<MItem> {
 
     /** @deprecated */
     @Deprecated
-    public boolean addAll(int index, Collection<? extends MItem> c) {
+    public boolean addAll(int index, Collection<? extends Item> c) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -151,7 +151,7 @@ public class MQueue<MItem> implements List<MItem>, Iterable<MItem> {
 
     /** @deprecated */
     @Deprecated
-    public void add(int index, MItem element) {
+    public void add(int index, Item element) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
@@ -169,24 +169,24 @@ public class MQueue<MItem> implements List<MItem>, Iterable<MItem> {
 
     /** @deprecated */
     @Deprecated
-    public ListIterator<MItem> listIterator() {
+    public ListIterator<Item> listIterator() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     /** @deprecated */
     @Deprecated
-    public ListIterator<MItem> listIterator(int index) {
+    public ListIterator<Item> listIterator(int index) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     /** @deprecated */
     @Deprecated
-    public List<MItem> subList(int fromIndex, int toIndex) {
+    public List<Item> subList(int fromIndex, int toIndex) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    private class MQueueIterator implements Iterator<MItem> {
-        MQueue<MItem> mQueue;
+    private class MQueueIterator implements Iterator<Item> {
+        MQueue<Item> mQueue;
         int index = -1;
 
         public MQueueIterator(MQueue q) {
@@ -197,7 +197,7 @@ public class MQueue<MItem> implements List<MItem>, Iterable<MItem> {
             return this.index + 1 < this.mQueue.size();
         }
 
-        public MItem next() {
+        public Item next() {
             ++this.index;
             return this.mQueue.get(this.index);
         }

@@ -70,8 +70,9 @@ public class ApproximationMask {
                 break;
             }
 
-            while(i$.hasNext()) {
-                Point p = (Point)i$.next();
+            Iterator<Point> it1 = cluster.iterator();
+            while(it1.hasNext()) {
+                Point p = it1.next();
                 List<Point> rangePoints = scoreClustering.range(p, epsilon);
                 if (rangePoints.size() >= minPts) {
                     this.imageProcessor.fillPolygon(ConvexHullTools.get(rangePoints));
@@ -86,10 +87,10 @@ public class ApproximationMask {
             ;
         }
 
-        progressListener.updateImage(this.imageProcessor);
-        this.imageProcessor.erode();
-        this.imageProcessor = Morphological.close(this.imageProcessor, (int)(0.0D * (double)breite));
-        this.imageProcessor = Morphological.dilateByReconstruction(this.imageProcessor, (int)(0.25D * (double)breite));
+//        progressListener.updateImage(this.imageProcessor);
+//        this.imageProcessor.erode();
+//        this.imageProcessor = Morphological.close(this.imageProcessor, (int)(0.0D * (double)breite));
+//        this.imageProcessor = Morphological.dilateByReconstruction(this.imageProcessor, (int)(0.25D * (double)breite));
     }
 
     public int getMaskPixelCount() {

@@ -11,8 +11,11 @@ import deviationScoreRegions.ScoreDbscan;
 import deviationScoreRegions.dbscan.DbscanTools;
 import deviationScoreRegions.modular.scoreImage.ScoreImage;
 import ij.process.ColorProcessor;
-import java.awt.Point;
+import ij.process.ImageProcessor;
+
+import java.awt.*;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
@@ -85,6 +88,21 @@ public class ScoreClustering extends ScoreDbscan {
             Tools.save(Tools.write(str, Tools.drawClusters(this.clusters, new ColorProcessor(scoreImage.getImageProcessor().getWidth(), scoreImage.getImageProcessor().getHeight()), false, true)));
         }
 
+        String str = "";
+        Tools.save(Tools.write(str, Tools.drawClusters(this.clusters, new ColorProcessor(scoreImage.getImageProcessor().getWidth(), scoreImage.getImageProcessor().getHeight()), false, true)));
+
         DbscanTools.sortBySiye(this.clusters);
+
+        for(int i = 0; i < this.clusters.size(); ++i) {
+            List<Point> cluster = this.clusters.get(i);
+            ImageProcessor clusterImage = Tools.newBlank(new ColorProcessor(scoreImage.getImageProcessor().getWidth(), scoreImage.getImageProcessor().getHeight()), Color.black);
+            Tools.drawPoints(cluster, clusterImage, Color.white);
+            Tools.save(clusterImage);
+        }
+
+//        List<Point> maxCluster = this.clusters.get(0);
+//        ImageProcessor clusterImage = Tools.newBlank(new ColorProcessor(scoreImage.getImageProcessor().getWidth(), scoreImage.getImageProcessor().getHeight()), Color.black);
+//        Tools.drawPoints(maxCluster, clusterImage, Color.white);
+//        Tools.save(clusterImage);
     }
 }

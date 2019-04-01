@@ -733,12 +733,13 @@ public class Tools {
 
     private static void drawCluster(List<Point> cluster, ImageProcessor original, ImageProcessor clusterImage, boolean meanColor, boolean drawConvexHull, Random random) {
         Color color = meanColor ? new Color(getMeanColor(cluster, original)) : randomColor(50, random);
-        drawPoints((Collection)cluster, clusterImage, color);
+        drawPoints(cluster, clusterImage, color);
         if (drawConvexHull) {
             clusterImage.drawPolygon(ConvexHullTools.get(cluster));
         }
 
     }
+
 
     public static ImageProcessor drawClusters(List<List<Point>> clusters, ImageProcessor original, boolean meanColor, boolean drawConvexHull, Random random) {
         ImageProcessor clusterImage = newBlank(original, Color.black);

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3487d71-4b0c-4bf9-9349-bf4cb51e09cc" name="Default Changelist" comment="">
+    <list default="true" id="7ede7f3e-695c-4ee9-ad72-43a04074b596" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/basics/javaAddons/MSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/basics/javaAddons/SortedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/basics/pointSetOperations/clustering/ColorRegions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/basics/pointSetOperations/clustering/Query.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/GUI/WebStartGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/GUI/WebStartGUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/GUI/WebStartGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/GUI/WebStartGUI$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/GUI/WebStartGUI$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/GUI/WebStartGUI$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/GUI/WebStartGUI$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/GUI/WebStartGUI$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/GUI/WebStartGUI$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/GUI/WebStartGUI$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/GUI/WebStartGUI$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/GUI/WebStartGUI$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/GUI/WebStartGUI$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/GUI/WebStartGUI$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/GUI/WebStartGUI$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/GUI/WebStartGUI$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/GUI/WebStartGUI$Method.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/GUI/WebStartGUI$Method.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/GUI/WebStartGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/GUI/WebStartGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/modular/DSR_Modular.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/modular/DSR_Modular.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/modular/scoreImage/DeviationScoreImage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Graf-Program/deviationScoreRegions/modular/scoreImage/DeviationScoreImage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/basics/Tools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/basics/Tools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/basics/javaAddons/MQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/basics/javaAddons/MQueue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/deviationScoreRegions/GUI/WebStartGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deviationScoreRegions/GUI/WebStartGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/deviationScoreRegions/modular/ApproximationMask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deviationScoreRegions/modular/ApproximationMask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/deviationScoreRegions/modular/DSR_Modular.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deviationScoreRegions/modular/DSR_Modular.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/deviationScoreRegions/modular/ScoreClustering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deviationScoreRegions/modular/ScoreClustering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/deviationScoreRegions/modular/ScoreRegions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deviationScoreRegions/modular/ScoreRegions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/deviationScoreRegions/modular/scoreImage/DeviationScoreImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/deviationScoreRegions/modular/scoreImage/DeviationScoreImage.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,61 +27,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Graf_Program$WebStartGUI.ic" NAME="WebStartGUI Coverage Results" MODIFIED="1542856822383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/robust_segmentation_of_relevant_regions_in_low_depth_of_field_images$WebStartGUI.ic" NAME="WebStartGUI Coverage Results" MODIFIED="1552662719371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>deviationScoreRegions.GUI.*</FILTER>
     </SUITE>
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="326259396">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="7" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.20" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="9" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="class" value="55" />
-          <entry key="java" value="288" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CLASS" value="55" />
-          <entry key="JAVA" value="288" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="1615" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="1615" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="Graf-Program" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/scoreImage/DeviationScoreImage.java">
+        <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/DSR_Modular.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+            <state relative-caret-position="424">
+              <caret line="65" column="30" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#3049#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/ScoreClustering.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="445">
+              <caret line="95" column="55" lean-forward="true" selection-start-line="95" selection-start-column="55" selection-end-line="95" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,31 +59,27 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/Statistics.java">
+        <entry file="jar:///usr/local/jdk/jdk1.8.0_191/src.zip!/java/awt/Color.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/GUI/WebStartGUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="247" column="110" selection-start-line="247" selection-start-column="110" selection-end-line="247" selection-end-column="110" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="341">
+              <caret line="70" column="35" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/edgeFilters/MeanLabNeighborDistance.java">
+        <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/ScoreDbscan.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+            <state relative-caret-position="214">
+              <caret line="36" column="21" lean-forward="true" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#1560#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#634#635#0" expanded="true" />
+                <element signature="e#678#679#0" expanded="true" />
+                <element signature="e#825#826#0" expanded="true" />
+                <element signature="e#880#881#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,35 +87,84 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/basics/Tools.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32756">
-              <caret line="1805" column="39" selection-start-line="1805" selection-start-column="33" selection-end-line="1805" selection-end-column="39" />
+            <state relative-caret-position="331">
+              <caret line="744" column="55" selection-start-line="744" selection-start-column="47" selection-end-line="744" selection-end-column="55" />
+              <folding>
+                <element signature="e#31698#31699#0" expanded="true" />
+                <element signature="e#32351#32352#0" expanded="true" />
+                <element signature="e#33440#33441#0" expanded="true" />
+                <element signature="e#36456#36457#0" expanded="true" />
+                <element signature="e#38930#38931#0" expanded="true" />
+                <element signature="e#39244#39245#0" expanded="true" />
+                <element signature="e#39353#39354#0" expanded="true" />
+                <element signature="e#46833#46834#0" expanded="true" />
+                <element signature="e#46926#46927#0" expanded="true" />
+                <element signature="e#47674#47675#0" expanded="true" />
+                <element signature="e#50095#50096#0" expanded="true" />
+                <element signature="e#56025#56026#0" expanded="true" />
+                <element signature="e#56157#56158#0" expanded="true" />
+                <element signature="e#61277#61278#0" expanded="true" />
+                <element signature="e#66128#66129#0" expanded="true" />
+                <element signature="e#70015#70016#0" expanded="true" />
+                <element signature="e#71158#71159#0" expanded="true" />
+                <element signature="e#78143#78144#0" expanded="true" />
+                <element signature="e#78259#78260#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/basics/MImage.java">
+        <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/scoreImage/ScoreImage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="195">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#377#378#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/basics/ColorConversions.java">
+        <entry file="file://$PROJECT_DIR$/src/basics/pointSetOperations/clustering/dbscan/AbstractDBSCANdebuginfos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+            <state relative-caret-position="230">
+              <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/DSR_Modular.java">
+        <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/dbscan/AbstractDBSCAN.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="931">
-              <caret line="65" column="51" selection-start-line="65" selection-start-column="51" selection-end-line="65" selection-end-column="51" />
+            <state relative-caret-position="-10">
+              <caret line="123" column="5" lean-forward="true" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/ApproximationMask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="695">
+              <caret line="86" column="13" lean-forward="true" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/GUI/WebStartGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="246" column="113" lean-forward="true" selection-start-line="246" selection-start-column="113" selection-end-line="246" selection-end-column="113" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -169,33 +183,24 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Frap_Norm</find>
-      <find>access</find>
-      <find>icolonnes</find>
-      <find>Deviation_Score_Regions</find>
-      <find>i$</find>
-      <find>It</find>
-      <find>getColorHistogram</find>
-      <find>rsearch</find>
-      <find>m_root</find>
-      <find>addall</find>
-      <find>scoreImage</find>
+      <find>get</find>
+      <find>MItem</find>
+      <find>items</find>
+      <find>add</find>
+      <find>Array</find>
+      <find>toArray</find>
       <find>our</find>
-      <find>DeviationScoreImage</find>
-      <find>NeighborEntry</find>
-      <find>euklidDistance</find>
-      <find>avg</find>
-      <find>getEdges</find>
-      <find>run</find>
-      <find>imageProcessor</find>
-      <find>load</find>
-      <find>try</find>
-      <find>System</find>
-      <find>suffix</find>
-      <find>size</find>
-      <find>resize</find>
-      <find>tfSize</find>
+      <find>setScoreThreshold</find>
+      <find>rangeResult</find>
+      <find>Iterator</find>
+      <find>lena</find>
+      <find>save</find>
+      <find>newBlank</find>
+      <find>drawCluster</find>
     </findStrings>
+    <replaceStrings>
+      <replace>Point</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -203,190 +208,241 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/modular/DofCheckerModular.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/modular/Fill.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/modular/HoleFiller.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/modular/ScoreClustering.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/modular/ScoreRegions.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/modular/scoreImage/DifferenceScoreImage.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/modular/scoreImage/ScoreImageFeatures.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/modular/scoreImage/ScoreImageTools.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/modular/edgeFilters/OldScoreLabDifference.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/GUI/WebStart.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/GUI/WebStartGUIBackup.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/grow/ColorRegionTools.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/grow/Grow.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/dbscan/AbstractDBSCAN.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/dbscan/DbscanTools.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/scoring/ScoreBlurDifference.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/scoring/ScoreDeviation.java" />
-        <option value="$PROJECT_DIR$/src/others/testFileCreations.java" />
-        <option value="$PROJECT_DIR$/src/evaluation/ImageTest.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/ScoreRegions.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/Evaluate.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/DeviationScoreRegionsBasic.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/DeviationScoreRegions_Tuned2.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/DeviationScoreRegions_Tuned.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/DeviationScoreRegions_ParameterReduced.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/DeviationScoreRegions_2_differentSizes.java" />
-        <option value="$PROJECT_DIR$/src/evaluation/Batch.java" />
-        <option value="$PROJECT_DIR$/src/evaluation/similarity/similarity/ColorHistrogramSimilarity.java" />
-        <option value="$PROJECT_DIR$/src/evaluation/similarity/similarity/SimilarityCheckTMP.java" />
-        <option value="$PROJECT_DIR$/src/evaluation/Versus.java" />
-        <option value="$PROJECT_DIR$/src/newTry/GridDivide.java" />
-        <option value="$PROJECT_DIR$/src/newTry/FlickrImagesWithIterator.java" />
-        <option value="$PROJECT_DIR$/src/newTry/DofChecker.java" />
-        <option value="$PROJECT_DIR$/src/newTry/ColorScoreGrowingNewTry.java" />
-        <option value="$PROJECT_DIR$/src/others/doanloaded/SSIM_index.java" />
-        <option value="$PROJECT_DIR$/src/others/doanloaded/SSIM_index_modified.java" />
+        <option value="$PROJECT_DIR$/src/deviationScoreRegions/modular/scoreImage/DeviationScoreImage.java" />
+        <option value="$PROJECT_DIR$/src/basics/pointSetOperations/Query.java" />
+        <option value="$PROJECT_DIR$/src/basics/pointSetOperations/clustering/Query.java" />
+        <option value="$PROJECT_DIR$/src/basics/pointSetOperations/clustering/ColorRegions.java" />
+        <option value="$PROJECT_DIR$/src/basics/javaAddons/SortedList.java" />
         <option value="$PROJECT_DIR$/src/basics/javaAddons/MSet.java" />
-        <option value="$PROJECT_DIR$/src/others/fuzzy/edu/wlu/cs/levy/CG/Editor.java" />
-        <option value="$PROJECT_DIR$/src/others/fuzzy/edu/wlu/cs/levy/CG/KDNode.java" />
-        <option value="$PROJECT_DIR$/src/others/fuzzy/edu/wlu/cs/levy/CG/KDTree.java" />
-        <option value="$PROJECT_DIR$/src/others/morphological/BinaryRegion.java" />
-        <option value="$PROJECT_DIR$/src/others/morphological/FlatRegions.java" />
-        <option value="$PROJECT_DIR$/src/others/fuzzy/filters/ToolsPhilipp.java" />
-        <option value="$PROJECT_DIR$/src/others/fuzzy/edu/wlu/cs/levy/CG/NearestNeighborList.java" />
-        <option value="$PROJECT_DIR$/src/evaluation/similarity/SimilarityCheck.java" />
+        <option value="$PROJECT_DIR$/src/deviationScoreRegions/dbscan/AbstractDBSCAN.java" />
         <option value="$PROJECT_DIR$/src/basics/javaAddons/MQueue.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/modular/Statistics.java" />
+        <option value="$PROJECT_DIR$/src/deviationScoreRegions/modular/ScoreRegions.java" />
+        <option value="$PROJECT_DIR$/src/deviationScoreRegions/modular/ApproximationMask.java" />
         <option value="$PROJECT_DIR$/src/deviationScoreRegions/modular/DSR_Modular.java" />
         <option value="$PROJECT_DIR$/src/basics/Tools.java" />
-        <option value="$PROJECT_DIR$/src/deviationScoreRegions/modular/scoreImage/DeviationScoreImage.java" />
+        <option value="$PROJECT_DIR$/src/deviationScoreRegions/modular/ScoreClustering.java" />
         <option value="$PROJECT_DIR$/src/deviationScoreRegions/GUI/WebStartGUI.java" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="y" value="-12" />
-    <option name="width" value="981" />
-    <option name="height" value="1032" />
+    <option name="x" value="87" />
+    <option name="y" value="-4" />
+    <option name="width" value="1353" />
+    <option name="height" value="856" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Graf-Program" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graf-Program" type="462c0819:PsiDirectoryNode" />
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Graf-Program" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graf-Program" type="462c0819:PsiDirectoryNode" />
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Graf-Program" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graf-Program" type="462c0819:PsiDirectoryNode" />
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="deviationScoreRegions" type="462c0819:PsiDirectoryNode" />
+              <item name="basics" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Graf-Program" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graf-Program" type="462c0819:PsiDirectoryNode" />
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="deviationScoreRegions" type="462c0819:PsiDirectoryNode" />
-              <item name="GUI" type="462c0819:PsiDirectoryNode" />
+              <item name="basics" type="462c0819:PsiDirectoryNode" />
+              <item name="javaAddons" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Graf-Program" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graf-Program" type="462c0819:PsiDirectoryNode" />
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Graf-Program" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
-              <item name="Graf-Program" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
               <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Graf-Program" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
               <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
               <item name="basics" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Graf-Program" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
               <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
               <item name="basics" type="462c0819:PsiDirectoryNode" />
               <item name="convexHull" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Graf-Program" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
               <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
               <item name="basics" type="462c0819:PsiDirectoryNode" />
               <item name="filter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Graf-Program" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="basics" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+              <item name="canny" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
               <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
               <item name="basics" type="462c0819:PsiDirectoryNode" />
               <item name="javaAddons" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Graf-Program" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
               <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
               <item name="basics" type="462c0819:PsiDirectoryNode" />
               <item name="math" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Graf-Program" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="basics" type="462c0819:PsiDirectoryNode" />
+              <item name="pointSetOperations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="basics" type="462c0819:PsiDirectoryNode" />
+              <item name="pointSetOperations" type="462c0819:PsiDirectoryNode" />
+              <item name="clustering" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="basics" type="462c0819:PsiDirectoryNode" />
+              <item name="pointSetOperations" type="462c0819:PsiDirectoryNode" />
+              <item name="clustering" type="462c0819:PsiDirectoryNode" />
+              <item name="dbscan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
               <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
               <item name="deviationScoreRegions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Graf-Program" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="deviationScoreRegions" type="462c0819:PsiDirectoryNode" />
+              <item name="dbscan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="deviationScoreRegions" type="462c0819:PsiDirectoryNode" />
+              <item name="grow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="deviationScoreRegions" type="462c0819:PsiDirectoryNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="deviationScoreRegions" type="462c0819:PsiDirectoryNode" />
+              <item name="modular" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="deviationScoreRegions" type="462c0819:PsiDirectoryNode" />
+              <item name="modular" type="462c0819:PsiDirectoryNode" />
+              <item name="edgeFilters" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
               <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
               <item name="deviationScoreRegions" type="462c0819:PsiDirectoryNode" />
               <item name="scoring" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="evaluation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="gradients" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="newTry" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="others" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="deviation_ScoreRegions.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="f&#9;ACTION&#9;ActivateFavoritesToolWindow" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543028956865" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554117871066" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../deviation_ScoreRegions/deviation_ScoreRegions.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.37859607" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -403,7 +459,7 @@
   <component name="RunManager">
     <configuration name="WebStartGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="deviationScoreRegions.GUI.WebStartGUI" />
-      <module name="Graf-Program" />
+      <module name="robust-segmentation-of-relevant-regions-in-low-depth-of-field-images" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="deviationScoreRegions.GUI.*" />
@@ -425,523 +481,433 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f3487d71-4b0c-4bf9-9349-bf4cb51e09cc" name="Default Changelist" comment="" />
-      <created>1542526216118</created>
+      <changelist id="7ede7f3e-695c-4ee9-ad72-43a04074b596" name="Default Changelist" comment="" />
+      <created>1543976614876</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1542526216118</updated>
-      <workItem from="1542526219219" duration="1009000" />
-      <workItem from="1542527442025" duration="16354000" />
-      <workItem from="1542774895288" duration="16000" />
-      <workItem from="1542774978784" duration="606000" />
-      <workItem from="1542845272453" duration="7160000" />
-      <workItem from="1542856667249" duration="1223000" />
-      <workItem from="1543022085425" duration="1033000" />
-      <workItem from="1543025468862" duration="3451000" />
-      <workItem from="1543112242439" duration="1237000" />
+      <updated>1543976614876</updated>
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32089000" />
-  </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="65" y="-4" width="1375" height="904" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.86654806" visible="true" weight="0.25545675" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.13345195" side_tool="true" weight="0.25141472" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.3291815" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.13523132" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.44483986" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.06939502" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32983023" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" visible="true" weight="0.08407437" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2586904" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.042200454" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="0" visible="true" weight="0.3291815" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3291815" />
-      <window_info anchor="bottom" id="Run" order="3" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3298969" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.11082474" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.125" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.39175257" />
+      <window_info anchor="right" id="Coverage" sideWeight="0.5008606" side_tool="true" weight="0.32931423" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" sideWeight="0.49913943" visible="true" weight="0.0" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
-    </layout-to-restore>
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/deviationScoreRegions/modular/Statistics.java</url>
-          <line>26</line>
+          <url>file://$PROJECT_DIR$/src/deviationScoreRegions/GUI/WebStartGUI.java</url>
+          <line>270</line>
           <properties />
-          <option name="timeStamp" value="12" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/deviationScoreRegions/modular/DSR_Modular.java</url>
-          <line>54</line>
+          <line>59</line>
           <properties />
-          <option name="timeStamp" value="13" />
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/deviationScoreRegions/modular/DSR_Modular.java</url>
-          <line>65</line>
+          <url>file://$PROJECT_DIR$/src/deviationScoreRegions/modular/ApproximationMask.java</url>
+          <line>90</line>
           <properties />
-          <option name="timeStamp" value="14" />
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/deviationScoreRegions/GUI/WebStartGUI.java</url>
-          <line>272</line>
+          <url>file://$PROJECT_DIR$/src/deviationScoreRegions/modular/ScoreClustering.java</url>
+          <line>91</line>
           <properties />
-          <option name="timeStamp" value="16" />
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/deviationScoreRegions/GUI/WebStartGUI.java</url>
-          <line>252</line>
+          <url>file://$PROJECT_DIR$/src/basics/Tools.java</url>
+          <line>1864</line>
           <properties />
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/deviationScoreRegions/GUI/WebStartGUI.java</url>
-          <line>243</line>
-          <properties />
-          <option name="timeStamp" value="18" />
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/scoring/ScoreBlurDifference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../source jar/deviation_ScoreRegions.jar!/deviationScoreRegions/scoring/ScoreDeviation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/scoring/ScoreDeviation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="57" column="70" selection-start-line="57" selection-start-column="70" selection-end-line="57" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/evaluation/ImageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="35" column="38" lean-forward="true" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3301#3302#0" expanded="true" />
-            <element signature="e#3353#3354#0" expanded="true" />
-            <element signature="e#3390#3391#0" expanded="true" />
-            <element signature="e#3442#3443#0" expanded="true" />
-            <element signature="e#3480#3481#0" expanded="true" />
-            <element signature="e#3533#3534#0" expanded="true" />
-            <element signature="e#3571#3572#0" expanded="true" />
-            <element signature="e#3624#3625#0" expanded="true" />
-            <element signature="e#3660#3661#0" expanded="true" />
-            <element signature="e#3724#3725#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/others/testFileCreations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/ScoreRegions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="106" column="53" lean-forward="true" selection-start-line="106" selection-start-column="53" selection-end-line="106" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#4602#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/Evaluate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="84" column="46" lean-forward="true" selection-start-line="84" selection-start-column="46" selection-end-line="84" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#11490#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/DeviationScoreRegionsBasic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="142" column="65" lean-forward="true" selection-start-line="142" selection-start-column="65" selection-end-line="142" selection-end-column="65" />
-          <folding>
-            <element signature="e#0#7161#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/DeviationScoreRegions_Tuned2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-504">
-          <caret line="284" column="59" lean-forward="true" selection-start-line="284" selection-start-column="59" selection-end-line="284" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#13496#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/DeviationScoreRegions_2_differentSizes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-314">
-          <caret line="262" column="21" lean-forward="true" selection-start-line="262" selection-start-column="21" selection-end-line="262" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/Deviation_Score_Regions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="49" column="18" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/DeviationScoreRegions_Tuned.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-490">
-          <caret line="286" column="51" selection-start-line="286" selection-start-column="51" selection-end-line="286" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/evaluation/Batch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="112" column="53" lean-forward="true" selection-start-line="112" selection-start-column="53" selection-end-line="112" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1100#1101#0" expanded="true" />
-            <element signature="e#1137#1138#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/evaluation/similarity/similarity/ColorHistrogramSimilarity.java">
+    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/grow/ColorRegion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-231">
-          <caret line="85" column="18" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/evaluation/similarity/similarity/SimilarityCheckTMP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2128">
-          <caret line="112" column="68" selection-start-line="112" selection-start-column="68" selection-end-line="112" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/evaluation/Versus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="54" column="85" selection-start-line="54" selection-start-column="85" selection-end-line="54" selection-end-column="85" />
+        <state relative-caret-position="120">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newTry/GridDivide.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newTry/FlickrImagesWithIterator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newTry/DofChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2204">
-          <caret line="134" column="24" selection-start-line="134" selection-start-column="24" selection-end-line="134" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newTry/ColorScoreGrowingNewTry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#700#701#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/others/doanloaded/SSIM_index.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4750">
-          <caret line="257" column="17" selection-start-line="257" selection-start-column="17" selection-end-line="257" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/others/doanloaded/SSIM_index_modified.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4674">
-          <caret line="251" column="17" selection-start-line="251" selection-start-column="17" selection-end-line="251" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/basics/MColor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/basics/javaAddons/MSet.java" />
-    <entry file="file://$PROJECT_DIR$/src/basics/javaAddons/SortedList.java" />
-    <entry file="file://$PROJECT_DIR$/src/basics/math/MinimalBoundingPolygon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/others/fuzzy/edu/wlu/cs/levy/CG/Editor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/others/fuzzy/edu/wlu/cs/levy/CG/KDTree.java" />
-    <entry file="file://$PROJECT_DIR$/src/others/morphological/BinaryRegion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="110" column="34" selection-start-line="110" selection-start-column="34" selection-end-line="110" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/others/morphological/FlatRegions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="54" column="61" selection-start-line="54" selection-start-column="61" selection-end-line="54" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/others/fuzzy/filters/ToolsPhilipp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="104" column="17" lean-forward="true" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../source jar/deviation_ScoreRegions.jar!/basics/javaAddons/MQueue.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="26" lean-forward="true" selection-end-line="209" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="362" column="18" selection-start-line="362" selection-start-column="12" selection-end-line="362" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/others/fuzzy/edu/wlu/cs/levy/CG/NearestNeighborList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="52" selection-start-line="52" selection-start-column="2" selection-end-line="56" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/others/fuzzy/edu/wlu/cs/levy/CG/KDNode.java" />
-    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/DeviationScoreRegions_ParameterReduced.java" />
-    <entry file="file://$PROJECT_DIR$/src/evaluation/similarity/SimilarityCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="186" column="53" lean-forward="true" selection-start-line="186" selection-start-column="53" selection-end-line="186" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/basics/javaAddons/MQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#5390#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#955#956#0" expanded="true" />
-            <element signature="e#1022#1023#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/scoreImage/ScoreImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="48" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/edgeFilters/EdgeFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../source jar/ij.jar!/ij/process/ByteProcessor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="560" column="19" selection-start-line="560" selection-start-column="13" selection-end-line="560" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../source jar/ij.jar!/ij/process/ByteBlitter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1803">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../source jar/ij.jar!/ij/process/ImageProcessor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="1757" column="25" selection-start-line="1757" selection-start-column="25" selection-end-line="1757" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/scoreImage/DeviationScoreImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/Statistics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/edgeFilters/MeanLabNeighborDistance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/basics/Tools.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32756">
-          <caret line="1805" column="39" selection-start-line="1805" selection-start-column="33" selection-end-line="1805" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/basics/MImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/basics/ColorConversions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+        <state relative-caret-position="465">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../deviation_ScoreRegions/ij.jar!/ij/process/ByteProcessor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="219" selection-start-line="219" selection-end-line="219" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/ColorScoreRegions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/DofCheckerModular.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/scoring/ScoreBlurDifference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/edgeFilters/MeanLabNeighborDistance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/scoring/ScoreDeviation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/scoreImage/DeviationScoreImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/GUI/WebStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/basics/ProSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../deviation_ScoreRegions/deviation_ScoreRegions.jar!/basics/pointSetOperations/clustering/ColorRegions.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="27" column="38" lean-forward="true" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/basics/pointSetOperations/clustering/ColorRegions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#2578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../deviation_ScoreRegions/deviation_ScoreRegions.jar!/basics/pointSetOperations/clustering/Query.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="26" lean-forward="true" selection-end-line="107" />
+          <folding>
+            <element signature="e#0#3329#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../deviation_ScoreRegions/deviation_ScoreRegions.jar!/basics/javaAddons/MSet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="86" column="5" lean-forward="true" selection-end-line="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../deviation_ScoreRegions/deviation_ScoreRegions.jar!/basics/javaAddons/SortedList.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="7" lean-forward="true" selection-end-line="41" />
+          <folding>
+            <element signature="e#0#898#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/basics/javaAddons/SortedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#898#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/basics/javaAddons/MSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="14" column="65" lean-forward="true" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/basics/ProgressListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../deviation_ScoreRegions/deviation_ScoreRegions.jar!/deviationScoreRegions/GUI/WebStartGUI.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="239" column="98" lean-forward="true" selection-start-line="239" selection-start-column="98" selection-end-line="239" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../deviation_ScoreRegions/deviation_ScoreRegions.jar!/basics/javaAddons/MQueue.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" lean-forward="true" selection-end-line="209" />
+          <folding>
+            <element signature="e#0#5390#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/basics/javaAddons/MQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="e#0#5390#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#862#863#0" expanded="true" />
+            <element signature="e#927#928#0" expanded="true" />
+            <element signature="e#961#962#0" expanded="true" />
+            <element signature="e#1028#1029#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/basics/pointSetOperations/clustering/Query.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#3329#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/ScoreRegions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="108" column="72" selection-start-line="108" selection-start-column="72" selection-end-line="108" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/ApproximationMask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="695">
+          <caret line="86" column="13" lean-forward="true" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/dbscan/AbstractDBSCAN.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="123" column="5" lean-forward="true" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/scoreImage/ScoreImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../deviation_ScoreRegions/ij.jar!/ij/process/ImageProcessor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="969" selection-start-line="969" selection-end-line="969" />
+          <folding>
+            <element signature="e#5824#5825#0" expanded="true" />
+            <element signature="e#5857#5858#0" expanded="true" />
+            <element signature="e#5887#5888#0" expanded="true" />
+            <element signature="e#5921#5922#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../deviation_ScoreRegions/ij.jar!/ij/process/ColorProcessor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="703" selection-start-line="703" selection-end-line="703" />
+          <folding>
+            <element signature="e#2454#2455#0" expanded="true" />
+            <element signature="e#2514#2515#0" expanded="true" />
+            <element signature="e#3101#3102#0" expanded="true" />
+            <element signature="e#3173#3174#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/DSR_Modular.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="65" column="51" selection-start-line="65" selection-start-column="51" selection-end-line="65" selection-end-column="51" />
+        <state relative-caret-position="424">
+          <caret line="65" column="30" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#3049#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/basics/pointSetOperations/clustering/dbscan/AbstractDBSCANdebuginfos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/ScoreDbscan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="36" column="21" lean-forward="true" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#1560#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#634#635#0" expanded="true" />
+            <element signature="e#678#679#0" expanded="true" />
+            <element signature="e#825#826#0" expanded="true" />
+            <element signature="e#880#881#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/basics/Tools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="744" column="55" selection-start-line="744" selection-start-column="47" selection-end-line="744" selection-end-column="55" />
+          <folding>
+            <element signature="e#31698#31699#0" expanded="true" />
+            <element signature="e#32351#32352#0" expanded="true" />
+            <element signature="e#33440#33441#0" expanded="true" />
+            <element signature="e#36456#36457#0" expanded="true" />
+            <element signature="e#38930#38931#0" expanded="true" />
+            <element signature="e#39244#39245#0" expanded="true" />
+            <element signature="e#39353#39354#0" expanded="true" />
+            <element signature="e#46833#46834#0" expanded="true" />
+            <element signature="e#46926#46927#0" expanded="true" />
+            <element signature="e#47674#47675#0" expanded="true" />
+            <element signature="e#50095#50096#0" expanded="true" />
+            <element signature="e#56025#56026#0" expanded="true" />
+            <element signature="e#56157#56158#0" expanded="true" />
+            <element signature="e#61277#61278#0" expanded="true" />
+            <element signature="e#66128#66129#0" expanded="true" />
+            <element signature="e#70015#70016#0" expanded="true" />
+            <element signature="e#71158#71159#0" expanded="true" />
+            <element signature="e#78143#78144#0" expanded="true" />
+            <element signature="e#78259#78260#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/jdk/jdk1.8.0_191/src.zip!/java/awt/Color.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="70" column="35" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/modular/ScoreClustering.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="95" column="55" lean-forward="true" selection-start-line="95" selection-start-column="55" selection-end-line="95" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -950,8 +916,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/deviationScoreRegions/GUI/WebStartGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="247" column="110" selection-start-line="247" selection-start-column="110" selection-end-line="247" selection-end-column="110" />
+        <state relative-caret-position="360">
+          <caret line="246" column="113" lean-forward="true" selection-start-line="246" selection-start-column="113" selection-end-line="246" selection-end-column="113" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -998,6 +964,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1009,11 +976,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Graf-Program</last-edited>
+          <last-edited>robust-segmentation-of-relevant-regions-in-low-depth-of-field-images</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.37859607" />
+                <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

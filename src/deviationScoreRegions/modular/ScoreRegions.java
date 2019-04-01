@@ -107,7 +107,7 @@ public class ScoreRegions {
 
             Point p;
             for(Iterator it = colorRegion.getPixels().iterator(); it.hasNext(); colorRegionMap[p.x][p.y] = colorRegion) {
-                p = (Point)i$.next();
+                p = (Point)it.next();
             }
         }
 

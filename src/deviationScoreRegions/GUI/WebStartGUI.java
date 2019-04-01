@@ -238,14 +238,14 @@ public class WebStartGUI extends JFrame implements Runnable, ProgressListener {
         this.jProgressBar1.setString("Segmentation running...");
         this.jProgressBar1.setIndeterminate(true);
         this.jProgressBar1.setVisible(true);
-//        int size = Integer.parseInt(this.tfSize.getText());
-        int size = 600;
+        int size = Integer.parseInt(this.tfSize.getText());
+//        int size = 600;
         if (this.method == WebStartGUI.Method.our && this.ourResult == null) {
 //            File[]  files = new File("C:\\Users\\jupan\\Desktop\\2011-Graf-Program\\dataset").listFiles();
 //            File[] files = new File("C:\\Users\\jupan\\Desktop\\2011-Graf-Program\\dataset\\THU-LJP-lowDOF\\msra\\test\\image").listFiles();
-            File[] files = new File("C:\\Users\\jupan\\Desktop\\2011-Graf-Program\\dataset\\THU-LJP-lowDOF\\msra\\train\\image").listFiles();
+            File[] files = new File("/home/ljp/Desktop/TernausNetForSalient/dataset/tmp/multi-tmp/").listFiles();
 //            String saliencyMapDir = "C:\\Users\\jupan\\Desktop\\2011-Graf-Program\\saliencyMap\\data-flickr\\";
-            String saliencyMapDir = "C:\\Users\\jupan\\Desktop\\2011-Graf-Program\\saliencyMap\\msra-train\\";
+            String saliencyMapDir = "/home/ljp/Desktop/TernausNetForSalient/dataset/tmp/multi-tmp-saliency/";
             FileWriter runTimeFile;
 
             for (int i = 0; i < files.length; ++i) {
@@ -261,13 +261,13 @@ public class WebStartGUI extends JFrame implements Runnable, ProgressListener {
                 this.ourResult = (new DSR_Modular(this)).run(Tools.resize(this.imageProcessor, size));
                 long endTime = System.currentTimeMillis();
                 try{
-                    runTimeFile = new FileWriter("C:\\Users\\jupan\\Desktop\\2011-Graf-Program\\saliencyMap\\run_time_file.txt");
+                    runTimeFile = new FileWriter("/home/ljp/Desktop/TernausNetForSalient/dataset/msra_unsupervised/run_time_file.txt");
                     runTimeFile.write(file.toString()+" "+(endTime-startTime));
                 }catch (IOException e){
                     System.out.println("Error in run_time_file.txt");
                 }
 
-                String mapName = saliencyMapDir + fileNameWithoutSuffix +".png";
+                String mapName = saliencyMapDir + fileNameWithoutSuffix +"-sm.png";
                 Tools.save(this.ourResult, mapName);
             }
 //            this.ourResult = (new DSR_Modular(this)).run(Tools.resize(this.imageProcessor, size));
